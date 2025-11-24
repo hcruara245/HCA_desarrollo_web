@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea1</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        a:link{
+            color: green;
+            text-decoration: none ;
+            cursor: zoom-in;
+            background-color: azure;
+            border: 10px;
+            border-color: black;
+            border-radius: 20px;
+            border-width: 5px;
+            border-style: solid;
+            padding: 5px;
+            box-shadow: 0 0 25px rgba(68, 0, 255, 0.7);
+            transition: box-shadow 0.3s ease;
+        }
+        a:hover{
+            color: red;
+            background-color: black;
+            padding: 10px;
+            box-shadow: 0 0 25px rgb(9, 255, 0);
+            transition: box-shadow 0.3s ease;
+        }
+        a:visited{
+            color: rgb(0, 238, 255);
+        }
+
+        table{
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(251, 255, 0);
+            border: 2px;
+            border-style: solid;
+            padding: 5px;
+            font-size: 12px;
+            border-collapse: collapse;
+            background-color: black;
+        }
+
+        th{
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(251, 255, 0);
+            border: 2px;
+            border-style: solid;
+            padding: 5px;
+            font-size: 12px;
+            border-collapse: collapse;
+            background-color: black;
+        }
+
+        tr{
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(251, 255, 0);
+            border: 2px;
+            border-style: solid;
+            padding: 5px;
+            font-size: 12px;
+            border-collapse: collapse;
+            background-color: black;
+        }
+
+        tr.color:nth-child(even){
+            background-color: chocolate;
+            border: 0px;
+        }
+
+        tr.color:nth-child(odd){
+            background-color: aquamarine;
+            color: rgb(255, 51, 0);
+            border: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tema uno</h1>
+    </header>
+    <p style="font-size: x-large; font-family: 'Courier New', Courier, monospace; text-align: center; color: rgb(0, 255, 213); background-color: rgb(251, 255, 0); background-image: url(TareaIntroduccion/alo.png);">hoy vamos a hablar de HTML</p>
+    <a style="color: rgb(255, 0, 0);" href="https://google.com">ENLACE</a>
+    <br>
+    <br>
+    <img src="https://pbs.twimg.com/media/EhqtgVfXYAsqFWe.jpg" width="250" height="600">
+    <br>
+    <br>
+    <h2>Rutina de Fernando Alonso</h2>
+    <ol style="font-size: 14px; color: green;" type="1">
+        <li>Se levanta de la cama</li>
+        <li>Ilusiona a todo el mundo el viernes con las mejoras</li>
+        <li>Queda primero en las sesiones de prácticas</li>
+        <li>Llega a la Q3 de milagro</li>
+        <li>Choca en la vuelta 15 o se le rompe el motor o alguna parte mecánica del coche</li>
+    </ol>
+    <h2>Deportes más vistos del mundo sin orden</h2>
+    <ul style="background-color: blue; color: rgb(255, 0, 149); cursor: not-allowed; list-style-type: circle;">
+        <li>Tenis</li>
+        <li>Futbol</li>
+        <li>Basket</li>
+        <li>Formula 1</li>
+        <li>Voleybol</li>
+    </ul>
+    <a href="https://es.wikipedia.org/wiki/tocina">PULSA AQUI</a>
+    <p style="color: red; background-image: url(https://hips.hearstapps.com/hmg-prod/images/thegrefg-cambio-fisico-portada-mens-health-1666199255.jpg?crop=1.00xw:0.752xh;0,0.0343xh&resize=1200:*); height: 400px;">Fotito para decorar</p>
+    <p style="background-image: url(data:image/jpeg;base64,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); height: 160px; width: 200px; color: yellowgreen;">He gafado la carrera entera</p>
+    <table>
+        <tr>
+            <th>Horario</th>
+            <th>Lunes</th>
+            <th>Mates</th>
+            <th>Miercoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+            <th>Sábado</th>
+            <th>Domingo</th>
+        </tr>
+        <tr>
+            <td>8:30-9:30</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+        </tr>
+        <tr>
+            <td>9:30-10:30</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+        </tr>
+        <tr>
+            <td>10:30-11:30</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+        </tr>
+        <tr>
+            <td>11:30-12:00</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+        </tr>
+        <tr>
+            <td>12:00-13:00</td>
+            <td colspan="7">Recreo</td>
+        </tr>
+        <tr>
+            <td>13:00-14:00</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+        </tr>
+        <tr>
+            <td>14:00-15:00</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+            <td>Dormir</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th colspan="2">España</th>
+        </tr>
+        <tr>
+            <td>Sevilla</td>
+            <td>Andalucia</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Barcelona</td>
+            <td>Cataluña</td>
+        </tr>
+        <tr>
+            <td>Independentistas</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <table>
+        <tr class="color">
+            <th colspan="2">España</th>
+        </tr>
+        <tr class="color">
+            <td>Tocina</td>
+            <td>Sevilla</td>
+        </tr>
+        <tr class="color">
+            <td rowspan="2" >Polonia</td>
+            <td>Rusia</td>
+        </tr>
+        <tr class="color">
+            <td>Alemania</td>
+        </tr>
+    </table>
+    <br>
+    <main>
+        <section class="form-card">
+            <!--Este codigo lo he hecho con IA para probarla-->
+            <h3>Formulario</h3>
+            <form id="user-form" action="#" method="post">
+                <fieldset class="field">
+                    <legend>Registro a mi página web</legend>
+                    <label for="first-name">Nombre</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="field">
+                    <label for="last-name">Apellido</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Tu apellido" required>
+                </div>
+
+                <div class="field">
+                    <label for="age">Edad</label>
+                    <input type="number" id="age" name="age" min="0" max="120" placeholder="Edad">
+                </div>
+
+                <fieldset class="field">
+                    <legend>Género</legend>
+                    <label><input type="radio" name="gender" value="male"> Hombre</label>
+                    <label><input type="radio" name="gender" value="female"> Mujer</label>
+                    <label><input type="radio" name="gender" value="other"> Otro</label>
+                </fieldset>
+
+                <fieldset class="field">
+                    <legend>Hobbies</legend>
+                    <label><input type="checkbox" name="hobbies" value="football"> Football</label>
+                    <label><input type="checkbox" name="hobbies" value="tennis"> Tennis</label>
+                    <label><input type="checkbox" name="hobbies" value="padel"> Padel</label>
+                </fieldset>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="tu@ejemplo.com" required>
+                </div>
+
+                <div class="field">
+                    <label for="password">Contraseña</label>
+                    <input  type="password" id="password" name="password" placeholder="Contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Recuerda que debe tener 8 letras minimo, mayusculas y minusculas.">
+                </div>
+
+                <div class="field">
+                    <label for="place">Dónde vives</label>
+                    <select id="place" name="place">
+                        <option value="Sevilla">Sevilla</option>
+                        <option value="Tocina">Tocina</option>
+                        <option value="Jerez">Jerez</option>
+                        <option value="Otros">Otro</option>
+                    </select>
+                </div>
+                <br>
+                <div class="opcionales">
+                    <div class="colores">
+                        <label for="color">Elige tu color favorito:</label>
+                        <input type="color" name="color" id="color">
+                    </div>
+                    <div class="archivo">
+                        <label for="file">Sube un archivo:</label>
+                        <input type="file" id="file" name="file">
+                        <br>
+                    </div>
+                    <div class="buscar">
+                        <label for="search">Buscar:</label>
+                        <input type="search" id="search" name="search" placeholder="Buscar...">
+                    </div>
+                    <div class="fecha">
+                        <label for="date">Selecciona tu cumpleaños:</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                </div>
+                <br>
+                <div class="field">
+                    <textarea id="comments" name="comments" rows="4" placeholder="Comentarios adicionales"></textarea>
+                </div>
+                <div class="actions">
+                    <button type="submit" class="btn">Enviar</button>
+                    
+                    <button type="reset" class="btn">Borrar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <br>
+        </section>
+    </main>
+    <main>
+        <canvas id="micanva" width="400" height="200"></canvas>
+        <script>
+            const canvas = document.getElementById("micanva");
+            const ctx = canvas.getContext("2d");
+            ctx.fillStyle = "green";
+            ctx.fillRect(0, 0, 400, 200);
+            ctx.strokeRect(0, 0, 400, 200);
+        </script>
+        </main>
+        <br>
+        <video width="650" height="300" controls>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <br>
+        <audio controls>
+            <source src="crying-goblin-clash-royale.mp3" type="audio/mp3">
+        </audio>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

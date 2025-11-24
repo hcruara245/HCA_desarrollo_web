@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoescuela Máxima</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#">Autoescuela Máxima</a>
+            <nav class="nav">
+                <a href="#services">Servicios</a>
+                <a href="#instructors">Instructores</a>
+                <a href="#pricing">Precios</a>
+                <a href="#contact" class="btn">Contacto</a>
+            </nav>
+            <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Aprende a conducir con confianza</h1>
+                    <p class="lead">En <strong>Autoescuela Máxima</strong> ofrecemos formación completa, moderna y segura para que consigas tu carné con los mejores profesionales.</p>
+                    <p class="hero-cta">
+                        <a href="#contact" class="btn primary">Reserva una clase</a>
+                        <a href="#services" class="btn ghost">Ver servicios</a>
+                    </p>
+                    <ul class="features">
+                        <li>Clases prácticas y teóricas</li>
+                        <li>Vehículos adaptados</li>
+                        <li>Instructores certificados</li>
+                    </ul>
+                </div>
+                <div class="hero-image" aria-hidden="true">
+                    <!-- SVG de vehículo estilizado (rojo/negro/blanco) -->
+                    <svg class="car-svg" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="bodyGrad" x1="0" x2="1">
+                                <stop offset="0%" stop-color="var(--primary)" stop-opacity="1"/>
+                                <stop offset="100%" stop-color="#9a1f1f" stop-opacity="1"/>
+                            </linearGradient>
+                            <filter id="carShadow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feDropShadow dx="0" dy="22" stdDeviation="28" flood-color="#000" flood-opacity="0.6"/>
+                            </filter>
+                        </defs>
+
+                        <!-- body + roof + windows -->
+                        <g filter="url(#carShadow)">
+                            <rect x="60" y="120" rx="44" ry="44" width="620" height="160" fill="url(#bodyGrad)" />
+                            <path d="M220 120 L310 80 L490 80 L600 120 Z" fill="#111" opacity="0.95" />
+                            <path d="M300 90 L470 90 L520 120 L270 120 Z" fill="rgba(255,255,255,0.06)" />
+                            <!-- highlights -->
+                            <path d="M100 160 C160 140, 260 140, 320 160" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="18" stroke-linecap="round" />
+                        </g>
+
+                        <!-- headlights -->
+                        <g>
+                            <ellipse cx="680" cy="190" rx="16" ry="10" fill="rgba(255,255,255,0.9)" opacity="0.9" />
+                            <ellipse cx="120" cy="190" rx="12" ry="8" fill="rgba(255,255,255,0.15)" opacity="0.5" />
+                        </g>
+
+                        <!-- wheels (groups to enable rotation) -->
+                        <g class="wheel-group wheel-front" transform="translate(200,300)">
+                            <circle class="wheel-outer" cx="0" cy="0" r="48" fill="#08121a" />
+                            <circle class="rim" cx="0" cy="0" r="20" fill="#2b2b2b" />
+                            <g class="spokes" stroke="#141414" stroke-width="2">
+                                <line x1="-14" y1="0" x2="14" y2="0" />
+                                <line x1="0" y1="-14" x2="0" y2="14" />
+                                <line x1="-10" y1="-10" x2="10" y2="10" />
+                                <line x1="-10" y1="10" x2="10" y2="-10" />
+                            </g>
+                        </g>
+
+                        <g class="wheel-group wheel-back" transform="translate(600,300)">
+                            <circle class="wheel-outer" cx="0" cy="0" r="48" fill="#08121a" />
+                            <circle class="rim" cx="0" cy="0" r="20" fill="#2b2b2b" />
+                            <g class="spokes" stroke="#141414" stroke-width="2">
+                                <line x1="-14" y1="0" x2="14" y2="0" />
+                                <line x1="0" y1="-14" x2="0" y2="14" />
+                                <line x1="-10" y1="-10" x2="10" y2="10" />
+                                <line x1="-10" y1="10" x2="10" y2="-10" />
+                            </g>
+                        </g>
+
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section services">
+            <div class="container">
+                <h2>Nuestros servicios</h2>
+                <p class="section-lead">Programas adaptados para jóvenes, adultos y empresas. Atención personalizada y flexibilidad horaria.</p>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Curso intensivo</h3>
+                        <p>Aprende rápido con lecciones compactas y simulacros de examen.</p>
+                        <a class="card-link" href="#pricing">Desde 350€</a>
+                    </article>
+                    <article class="card">
+                        <h3>Clases particulares</h3>
+                        <p>Sesiones uno-a-uno para avanzar a tu ritmo.</p>
+                        <a class="card-link" href="#contact">Solicitar</a>
+                    </article>
+                    <article class="card">
+                        <h3>Formación para empresas</h3>
+                        <p>Capacitación para flotas y conductores profesionales.</p>
+                        <a class="card-link" href="#contact">Más info</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="instructors" class="section instructors">
+            <div class="container">
+                <h2>Instructores</h2>
+                <p class="section-lead">Profesionales cualificados con años de experiencia.</p>
+                <div class="instructor-grid">
+                    <div class="instructor">
+                        <div class="avatar a1"></div>
+                        <h4>María López</h4>
+                        <p>Especialista en formación para jóvenes conductores.</p>
+                    </div>
+                    <div class="instructor">
+                        <div class="avatar a2"></div>
+                        <h4>Carlos Ruiz</h4>
+                        <p>Formador avanzado y evaluador de pruebas.</p>
+                    </div>
+                    <div class="instructor">
+                        <div class="avatar a3"></div>
+                        <h4>Ana Martín</h4>
+                        <p>Instructora de vehículos automáticos y adaptados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="section pricing">
+            <div class="container">
+                <h2>Precios</h2>
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <h3>Básico</h3>
+                        <p class="price">€199</p>
+                        <ul>
+                            <li>Clases teóricas</li>
+                            <li>4 prácticas</li>
+                        </ul>
+                        <a class="btn" href="#contact">Contratar</a>
+                    </div>
+                    <div class="price-card featured">
+                        <h3>Completo</h3>
+                        <p class="price">€350</p>
+                        <ul>
+                            <li>Clases teóricas</li>
+                            <li>10 prácticas</li>
+                            <li>Simulacro de examen</li>
+                        </ul>
+                        <a class="btn primary" href="#contact">Contratar</a>
+                    </div>
+                    <div class="price-card">
+                        <h3>Particulares</h3>
+                        <p class="price">€45 / hora</p>
+                        <ul>
+                            <li>Sesión individual</li>
+                            <li>Flexibilidad horaria</li>
+                        </ul>
+                        <a class="btn" href="#contact">Contratar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <h2>Contacto</h2>
+                    <p>Estamos en tu ciudad. Llámanos o rellena el formulario y te llamamos.</p>
+                    <ul class="contact-list">
+                        <li>Tel: <a href="tel:+34123456789">+34 123 456 789</a></li>
+                        <li>Email: <a href="mailto:info@autoescuelamaxima.es">info@autoescuelamaxima.es</a></li>
+                        <li>Dirección: Calle Falsa 123, Ciudad</li>
+                    </ul>
+                </div>
+                <form class="contact-form" action="#" onsubmit="alert('Gracias, nos pondremos en contacto contigo'); return false;">
+                    <label for="name">Nombre</label>
+                    <input id="name" name="name" type="text" required>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required>
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button class="btn primary" type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="year"></span> Autoescuela Máxima — Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        // Small interactive bits
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.nav');
+        toggle.addEventListener('click', ()=> nav.classList.toggle('open'));
+    </script>
+</body>
+</html>

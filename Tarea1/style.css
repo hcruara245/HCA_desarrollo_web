@@ -1,0 +1,201 @@
+/* Professional, simple form styles */
+:root{
+    --bg: #0f172a; /* dark blue */
+    --card: #ffffff;
+    --muted: #6b7280;
+    --accent: #2563eb; /* blue */
+    --success: #10b981;
+}
+
+/* Page background and typography */
+body{
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: linear-gradient(180deg, #ff00f2 10%, #1e293b 100%);
+    color: #f8fafc;
+    -webkit-font-smoothing:antialiased;
+}
+
+header h1{ text-align:center; color: #f0f9ff; }
+
+main{ display:flex; justify-content:center; padding:2rem 1rem; }
+
+.form-card{
+    width: 100%;
+    max-width: 440px;
+    background: var(--card);
+    color: #0b1220;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+    padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+}
+
+.form-card h3{ margin: 0 0 0.75rem 0; font-size: 1.25rem; text-align:center; }
+
+.field{ margin-bottom: 0.75rem; display:flex; flex-direction:column; }
+.field label{ font-size: 0.95rem; margin-bottom: 0.35rem; color: var(--muted); }
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"],
+.field input[type="number"],
+.field select{
+    padding: 0.5rem 0.6rem;
+    border: 1px solid #e6eef8;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #fff;
+}
+
+/* Textarea should not overflow the form width and only be vertically resizable */
+.field textarea{
+    padding: 0.5rem 0.6rem;
+    border: 1px solid #e6eef8;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #fff;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; /* include padding/border in width calculation */
+    resize: vertical; /* allow vertical resize only */
+}
+
+.field input[type="text"]::placeholder,
+.field input[type="email"]::placeholder{ color:#9aa4b2 }
+
+fieldset.field{ border: none; padding: 0; }
+fieldset.field legend{ font-weight:600; margin-bottom:0.35rem; color:var(--muted); }
+fieldset.field label{ display:inline-flex; align-items:center; gap:0.5rem; margin-right:1rem; font-weight:500; color:#334155 }
+
+.actions{ display:flex; justify-content:center; margin-top:0.5rem; gap:1rem; }
+.btn{
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight:600;
+    box-shadow: 0 6px 18px rgba(37,99,235,0.25);
+}
+.btn:hover{ transform: translateY(-2px); box-shadow: 0 10px 30px rgba(37,99,235,0.2); }
+
+/* Responsive */
+@media (max-width:420px){
+    .form-card{ padding: 1rem; border-radius:10px; }
+}
+
+/* small accessibility helpers */
+input:focus, select:focus{ outline: 3px solid rgba(37,99,235,0.15); }
+label[aria-hidden="true"]{ display:none; }
+
+/* Global textarea rule: never wider than its form/card and only vertical resize allowed */
+form textarea, .form-card textarea, textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    overflow-wrap: break-word;
+}
+
+.form textarea, .colores, .archivo, .buscar, .fecha{
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+/* Subtle, minimal enhancements for specific small controls */
+.fecha, .buscar, .archivo, .colores{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 0.6rem;
+}
+.fecha label, .buscar label, .archivo label, .colores label{
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin-left: 0.1rem;
+}
+.fecha input[type="date"], .buscar input[type="search"], .archivo input[type="file"], .colores input[type="color"]{
+    padding: 0.4rem 0.5rem;
+    border: 1px solid #e6eef8;
+    border-radius: 6px;
+    background: #fff;
+    height: 38px;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+}
+
+/* File input and color pickers show native UI; keep small padding and alignment */
+.archivo input[type="file"]{ padding: 0.25rem; height: auto; }
+.colores input[type="color"]{ padding: 6px; height: 38px; }
+
+/* Ensure these controls don't get the textarea resize behaviour */
+.fecha, .buscar, .archivo, .colores textarea{ resize: vertical; }
+
+/* Password validation visuals: red when invalid, green when valid */
+#password{
+    transition: box-shadow 0.18s ease, border-color 0.18s ease;
+}
+#password:invalid{
+    border-color: #ef4444; 
+    box-shadow: 0 0 0 3px rgba(239,68,68,0.08);
+}
+#password:valid{
+    border-color: #10b981; 
+    box-shadow: 0 0 0 3px rgba(16,185,129,0.08);
+}
+
+.hint{
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.82rem;
+    color: #6b7280;
+}
+
+.field input[type="file"]{border-radius: 2px; padding: 0.25rem; font-size: medium; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+
+.field input[type="file"]::-webkit-file-upload-button {
+    background: var(--accent);
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight:600;
+    box-shadow: 0 6px 18px rgba(37,99,235,0.25);
+}
+
+.field input[type="file"]::-webkit-file-upload-button:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 10px 30px rgba(37,99,235,0.2); 
+}
+
+.field input[type=date] {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.field input[type=date]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+.field input[type=date]:hover {
+    background-color: #f0f0f0;
+}
+.field input[type=date]:focus {
+    outline: 3px solid rgba(57, 37, 235, 0.568);
+}
+.field input[type=search]::-webkit-search-cancel-button {
+    cursor: pointer;
+}
+.field input[type=search] {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.field input[type=color] {
+    padding: 4px;
+    cursor: pointer;
+}
+
+.field input[type="password"] {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
