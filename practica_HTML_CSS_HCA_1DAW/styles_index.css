@@ -30,7 +30,6 @@ body{
 
 main{
     margin-top: 100px; /* para que no se solape con la barra de navegacion */
-    padding: 20px;
     background: linear-gradient(to right bottom, #15151e)
 }
 
