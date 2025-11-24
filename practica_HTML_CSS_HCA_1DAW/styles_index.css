@@ -1,14 +1,14 @@
-/* añadir fuente de f1 a el css */
+/* añadir fuente de f1 al CSS - registra la fuente personalizada para usarla con font-family 'f1' */
 @font-face{
-    /* aqui pongo el nombre que le voy a dar para cuando la use */
+    /* nombre para usar la fuente en font-family */
     font-family: "f1";
-    /* aqui pongo la ruta de la fuente */
+    /* ruta/archivo de la fuente (formato woff) */
     src: url("Formula1/Formula1-Regular_web_0.ttf") format("woff"),
 }
 
-/* Aqui pongo los estilos de header donde le he puesto una posicion
-absoluta y le pongo el ancho al maximo y haya de separacion con
-arriba de 30 pixeles siempre */
+/* Estilos del header: centrado, tipografía y posición absoluta
+     - Explicación: centra el texto, aplica la fuente 'f1' y fija el header
+         a 30px desde arriba para que no se solape con la navegación. */
 header{
     text-align: center;
     padding: 10px 0;
@@ -28,9 +28,18 @@ body{
     font-family: Arial, sans-serif;
 }
 
+/* Quitar margen global en 'main' para evitar huecos no deseados
+    - Explicación: eliminamos márgenes por defecto y aplicamos fondo. */
 main{
-    margin-top: 100px; /* para que no se solape con la barra de navegacion */
-    background: linear-gradient(to right bottom, #15151e)
+    margin: 0;
+    background: linear-gradient(to right bottom, #15151e);
+}
+
+/* Mantener separación con la barra de navegación sólo en el primer main
+   - Explicación: añadimos padding-top al primer main para que el contenido
+     no quede debajo del nav fijo. */
+main:first-of-type{
+    padding-top: 100px; /* evita solapamiento con la navegación fija */
 }
 
 ul{
@@ -97,4 +106,208 @@ ul  li  a:hover{
 
 .contenido a:hover{
     background: rgba(255, 0, 0, 1);;
+}
+
+.contenedorFotoTexto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 20px;
+}
+
+.contenedorDeFoto{
+    width: 50%;
+    height: 100%;
+    position: block;
+    left: 0px;
+    top: 20px;
+    padding: 20px;
+}
+
+.contenedorDeFoto img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(255, 82, 82, 0.849);
+    border: 2px solid rgba(255, 0, 0, 0.95);
+}
+
+.textoAdicional{
+    width:50%;
+    height: 100%;
+    position: block;
+    top: 20px;
+    color: rgba(255, 0, 0, 0.95);
+    font-family: "f1", sans-serif;
+    text-align: justify;
+    padding: 20px;
+}
+
+.textoAdicional p {
+    color: white;
+}
+
+.contenedorTextoFoto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 20px;
+}
+
+.contenedorDeFoto2 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    box-shadow: 0px 0px 8px rgba(255, 166, 82, 0.849);
+    border: 2px solid rgba(255, 0, 0, 0.95);
+}
+
+.contenedorDeFoto2{
+    width: 100%;
+    height: 100%;
+    position: block;
+    left: 0px;
+    top: 20px;
+    padding: 20px;
+}
+
+.textoDeFoto{
+    width:50%;
+    height: 100%;
+    position: block;
+    top: 20px;
+    color: rgba(255, 0, 0, 0.95);
+    font-family: "f1", sans-serif;
+    text-align: justify;
+    padding: 20px;
+}
+
+.textoDeFoto p {
+    color: white;
+}
+
+.primerasCarreras{
+    padding: 20px;
+    color: rgba(255, 0, 0, 0.95);
+    font-family: "f1", sans-serif;
+    text-align: center;
+}
+
+.primerasCarreras p{
+    color: white;
+}
+
+.cincoprimerasCarreras{
+    padding: 20px;
+    color: rgba(255, 0, 0, 0.95);
+    font-family: "f1", sans-serif;
+    text-align: center;
+}
+
+.cincoprimerasCarreras p{
+    color: white;
+}
+
+.carruselDeFotos{
+    display: flex;
+    justify-content: flex-start;
+     /* Para que la primera foto no se quede fuera
+         - Explicación: asegura que el inicio del carrusel sea visible. */
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto;
+    
+}
+
+.carruselDeFotos img{
+    width: 300px;
+    height: 200px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 8px rgba(210, 210, 255, 0.452);
+    border: 2px solid rgba(255, 0, 0, 0.95);
+}
+
+.contenedorFotoTexto h1,
+.contenedorFotoTexto p,
+.contenedorTextoFoto h1,
+.contenedorTextoFoto p,
+.textoAdicional h1,
+.textoAdicional p,
+.textoDeFoto h1,
+.textoDeFoto p, 
+.primerasCarreras,
+.primerasCarreras p,
+.primerasCarreras h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Eliminar márgenes por defecto de títulos y párrafos dentro de los contenedores
+   - Explicación: normaliza márgenes y rellenos para evitar huecos indeseados */
+/* (esta regla ya está aplicada en el selector anterior) */
+
+.carruselDeFotos {
+    overflow-x: auto;
+    /* padding inferior reducido para minimizar el espacio reservado a la scrollbar */
+    padding-bottom: 18px;
+    /* Firefox: ocultar por defecto */
+    scrollbar-width: none;
+    /* IE 10+ / Edge (legacy): ocultar */
+    -ms-overflow-style: none;
+    /* Color sugerido para la scrollbar (apunte; no estará visible mientras esté oculta) */
+    scrollbar-color: rgba(0,0,0,0.25) transparent;
+}
+
+/* WebKit: ocultar la scrollbar por defecto estableciendo altura 0 */
+.carruselDeFotos::-webkit-scrollbar {
+    height: 0;
+}
+
+/* Al pasar el cursor mostrar una scrollbar fina y discreta */
+.carruselDeFotos:hover {
+    /* Firefox: mostrar scrollbar fina */
+    scrollbar-width: thin;
+    /* IE/Edge: restaurar comportamiento por defecto */
+    -ms-overflow-style: auto;
+    /* Color del thumb en Firefox cuando es visible */
+    scrollbar-color: rgba(0,0,0,0.35) transparent;
+}
+
+.carruselDeFotos:hover::-webkit-scrollbar {
+    height: 8px; /* fina y discreta */
+}
+
+.carruselDeFotos::-webkit-scrollbar-track {
+    background: transparent; /* pista transparente para integrarse */
+}
+
+/* Pulgar translúcido con borde sutil y sombra interior para integrarse con el fondo */
+.carruselDeFotos::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.22);
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.03);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.12);
+    transition: opacity 150ms ease, background-color 150ms ease;
+    opacity: 0; /* mantenerlo casi invisible hasta hover */
+}
+
+.carruselDeFotos:hover::-webkit-scrollbar-thumb {
+    opacity: 1;
+    background: rgba(0,0,0,0.34); /* ligeramente más visible al hover */
+}
+
+/* Oscurecer ligeramente el pulgar al pasar el ratón para dar indicación visual */
+.carruselDeFotos::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.45);
+}
+
+.primerasCarreras video{
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0px 0px 8px rgba(255, 82, 82, 0.849);
+    border: 2px solid rgba(255, 0, 0, 0.95);
 }
