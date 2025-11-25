@@ -141,7 +141,8 @@ ul  li  a:hover{
     color: rgba(255, 0, 0, 0.95);
     font-family: "f1", sans-serif;
     text-align: justify;
-    padding: 20px;
+    padding: 30px;
+    white-space: pre-line; /* conserva saltos de línea en el texto */
 }
 
 .textoAdicional p {
@@ -356,4 +357,12 @@ ul  li  a:hover{
 .gp6a10 h1{
     color: cyan;
     text-shadow: 1px 0px rgb(0, 199, 199), -1px 0px rgb(0, 199, 199), 0px 1px rgb(0, 199, 199), 0px -1px rgb(0, 199, 199);
+}
+
+.gp6a10 p{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin: 6px;
+    padding: 10px;
 }
