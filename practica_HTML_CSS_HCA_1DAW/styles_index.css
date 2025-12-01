@@ -333,9 +333,10 @@ ul  li  a:hover{
    ========================================================== */
 /* Tabla que muestra los resultados de las carreras Sprint */
 .cincoprimerasCarreras table{
-    width: 100%; /* Ocupa todo el ancho */
+    max-width: 360px; /* Ancho máximo */
+    width: 100%; /* Ancho responsive */
     border-collapse: collapse; /* Borra espacios entre celdas */
-    margin-top: 20px; /* Margen superior */
+    margin: 20px auto; /* Centra la tabla con márgenes */
     align-items: center; /* Centra contenido */
     text-align: center; /* Texto centrado */
     border: 2px rgba(0, 0, 0, 0.95); /* Borde oscuro */
@@ -406,13 +407,124 @@ ul  li  a:hover{
     /* Sombra en los 4 lados para que resalte */
 }
 
+.gp6a10 h2{
+    color: rgb(0, 238, 255); /* Color cyan */
+    text-shadow: 1px 0px blue, -1px 0px orange, 0px 1px gold, 0px -1px blue;
+    /* Sombra en los 4 lados para que resalte */
+    padding: 10px; /* Espacio interno */
+    margin: 1px;
+}
+
 /* Párrafos en color blanco */
 .gp6a10 p{
     color: white; /* Blanco */
     text-align: center; /* Centrado */
     font-size: 18px; /* Texto grande */
-    margin: 6px; /* Margen pequeño */
+    margin: 4px; /* Margen pequeño */
     padding: 10px; /* Espacio interno */
+}
+
+#gpmiami img{
+    max-width: 720px; /* Ancho máximo */
+    width: 80%; /* Ancho completo */
+    height: auto; /* Altura automática */
+    border-radius: 6px; /* Esquinas redondeadas */
+    box-shadow: 0px 0px 8px rgba(82, 255, 210, 0.849); /* Sombra cyan */
+    border: 2px solid rgba(0, 255, 255, 0.95); /* Borde cyan */
+    margin-top: 10px; /* Margen superior */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Mostrar las imágenes de Imola y Mónaco en horizontal */
+.imagenesImolaMonaco{
+    display: flex; /* Coloca las imágenes en fila */
+    gap: 20px; /* Separación entre imágenes */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Alinear verticalmente */
+    flex-wrap: wrap; /* Permite salto a siguiente línea en pantallas pequeñas */
+    padding: 10px; /* Espacio interno */
+}
+
+#gpimolaymonaco h2{
+    text-align: center; /* Centrado */
+    color: rgb(0, 255, 0);
+    text-shadow: 2px 0px red, -2px 0px red, 0px 2px white;
+    /* Sombra en los 4 lados para que resalte */
+    padding: 10px; /* Espacio interno */
+    margin: 1px;
+}
+
+#gpimolaymonaco p{
+    color: rgb(0, 255, 0); 
+    text-align: center; /* Centrado */
+    font-size: 18px; /* Texto grande */
+    margin: 4px; /* Margen pequeño */
+    padding: 10px; /* Espacio interno */
+    text-shadow: #fff 1px 1px 5px;
+}
+
+.imagenesImolaMonaco img{
+    max-width: 720px; /* Limita ancho máximo */
+    width: 48%; /* Dos imágenes lado a lado ocupando ~50% cada una */
+    height: auto; /* Mantener proporción */
+    border-radius: 6px; /* Esquinas redondeadas */
+    box-shadow: 0px 0px 8px white; /* Sombra blanca */
+    border: 2px solid rgba(0, 255, 64, 0.95); /* Borde verde */
+    margin-top: 10px; /* Margen superior */
+    margin-bottom: 10px; /* Margen inferior */
+    display: block; /* Asegura comportamiento de imagen normal */
+}
+
+#gpbarcelonaycanada h2{
+    text-align: center; /* Centrado */
+    color: white;
+    text-shadow: 4px 0px red, -2px 0px yellow;
+    /* Sombra en los 4 lados para que resalte */
+    padding: 10px; /* Espacio interno */
+    margin: 1px;
+}
+
+#gpbarcelonaycanada a{
+    color: rgb(255, 0, 0); 
+    text-align: center; /* Centrado */
+    font-size: 18px; /* Texto grande */
+    margin: 4px; /* Margen pequeño */
+    padding: 10px; /* Espacio interno */
+    text-shadow: yellow 0px 0px 22px;
+    text-decoration: none;
+}
+#gpbarcelonaycanada a:hover{
+    text-decoration: underline;
+}
+
+#gpbarcelonaycanada p{
+    color: yellow; 
+    text-align: center; /* Centrado */
+    font-size: 18px; /* Texto grande */
+    margin: 4px; /* Margen pequeño */
+    padding: 10px; /* Espacio interno */
+    text-shadow: #fff 1px 1px 5px;
+}
+
+.imagenesBarcelonaCanada{
+    display: flex; /* Coloca las imágenes en fila */
+    gap: 20px; /* Separación entre imágenes */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Alinear verticalmente */
+    flex-wrap: wrap; /* Permite salto a siguiente línea en pantallas pequeñas */
+    padding: 10px; /* Espacio interno */
+}
+
+.imagenesBarcelonaCanada img{
+    max-width: 720px; /* Limita ancho máximo */
+    width: 48%; /* Dos imágenes lado a lado ocupando ~50% cada una */
+    height: auto; /* Mantener proporción */
+    border-radius: 6px; /* Esquinas redondeadas */
+    box-shadow: 0px 0px 8px rgba(255, 255, 82, 0.849); /* Sombra amarilla */
+    border: 2px solid rgba(255, 255, 0, 0.95); /* Borde amarillo */
+    margin-top: 10px; /* Margen superior */
+    margin-bottom: 10px; /* Margen inferior */
+    display: block; /* Asegura comportamiento de imagen normal */
 }
 
 /* ==========================================================
@@ -440,12 +552,10 @@ video{
     color: rgba(0, 200, 220, 1); /* Color cyan por defecto */
     font-family: "f1", sans-serif; /* Fuente F1 */
     margin: 0; /* Sin margen externo */
+    border-top: #fff 4px solid; /* Línea divisoria blanca arriba */
 }
 
-/* ID para identificar la sección principal de audios */
-#seccion-audios-f1 {
-    /* Este ID permite seleccionar específicamente esta sección si es necesario */
-}
+
 
 /* ==========================================================
    ENCABEZADO DE LA SECCIÓN DE AUDIOS
@@ -589,14 +699,21 @@ video{
     margin: 0; /* Sin margen externo */
     padding: 0; /* Sin espacios internos */
     display: flex; /* Alinea los elementos */
-    flex-direction: column; /* En sentido vertical */
+    flex-direction: row; /* En sentido horizontal */
+    flex-wrap: wrap; /* Salta a siguiente línea cuando sea necesario */
     gap: 20px; /* Espacio entre categorías */
     background-color: transparent !important; /* Fondo transparente (no hereda nav) */
     position: static !important; /* Posición normal */
-    width: auto !important; /* Ancho automático */
+    width: 100%; /* Ancho completo */
     z-index: auto !important; /* Sin orden especial */
     box-shadow: none !important; /* Sin sombra */
     align-items: flex-start !important; /* Alinea a la izquierda */
+}
+
+/* Cada elemento ocupa aproximadamente la mitad del ancho para mostrar 2 por fila */
+#lista-categorias-audios .categoriaAudio {
+    flex: 1 1 calc(50% - 10px); /* 50% del ancho menos el gap */
+    min-width: 300px; /* Ancho mínimo para evitar colapso */
 }
 
 /* ==========================================================
@@ -631,7 +748,7 @@ video{
    SUBLISTA DE AUDIOS (dentro de categorías)
    ========================================================== */
 /* Sublista con los audios individuales de cada categoría */
-.sublistaAudios {
+#sublistaAudios {
     list-style: none; /* Quita los puntos */
     margin: 0; /* Sin margen externo */
     padding-left: 15px; /* Indentación a la izquierda */
