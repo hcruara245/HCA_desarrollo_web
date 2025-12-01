@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Configuración básica de la página -->
     <meta charset="UTF-8">
+    <!-- Permite que el navegador entienda caracteres especiales como acentos -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página se adapte bien a móviles y tablets -->
     <title>F1 - 2025 - Temporada para recordar</title>
+    <!-- El título que aparece en la pestaña del navegador -->
     <link rel="stylesheet" href="styles_index.css">
+    <!-- Conectamos el archivo CSS para aplicar los estilos -->
     <meta name="author" content="Hugo Cruz Aranda">
+    <!-- Quién creó esta página -->
     <meta name="description" content="Página web dedicada a la temporada 2025 de Fórmula 1">
+    <!-- Descripción para que los buscadores como Google entiendan de qué va la página -->
 </head>
 <body>
-    <!-- Creo un encabezado antes del contenido
-    principal para que sea un titulo de todo-->
+    <!-- Encabezado principal de la página con el título grande -->
     <header>
         <h1>F1 - 2025 - Temporada para recordar</h1>
     </header>
+    
+    <!-- Barra de navegación con menú desplegable -->
     <main>
         <div>
             <ul>
+                <!-- Primer elemento del menú: Investigar -->
                 <li class="des"> 
                     <a href="https://google.es">Investigar</a>
+                    <!-- Cuando pasas el ratón por encima, aparecen estas opciones -->
                     <div class="contenido">
                         <a href="https://google.es">Pilotos</a>
                         <a href="https://google.es">Coches</a>
                         <a href="https://google.es">Escuderías</a>
                     </div>
                 </li>
+                <!-- Segundo elemento del menú: Comprar -->
                 <li class="des"> 
                     <a href="https://google.es">Comprar</a>
+                    <!-- Opciones cuando pasas el ratón -->
                     <div class="contenido">
                         <a href="https://google.es">Tickets abu dhabi</a>
                         <a href="https://google.es">Ropa</a>
                         <a href="https://google.es">Exclusivos</a>
                     </div>
                 </li>
+                <!-- Tercer elemento del menú: Redes sociales -->
                 <li class="des"> 
                     <a href="https://google.es">Redes sociales</a>
+                    <!-- Enlaces a las redes sociales oficiales de F1 -->
                     <div class="contenido">
                         <a href="https://www.tiktok.com/@f1?lang=es">Tik tok</a>
                         <a href="https://www.instagram.com/f1/">Instagram</a>
@@ -44,10 +58,14 @@
             </ul>
         </div>
     </main>
+    
+    <!-- Sección 1: Información sobre la temporada 2024 con foto y texto lado a lado -->
     <main class="contenedorFotoTexto">
+        <!-- La foto aparece a la izquierda -->
         <div class="contenedorDeFoto">
             <img src="max_campeon_mundial.jpeg" alt="campeon mundial f1 2024 Max Verstappen">
         </div>
+        <!-- El texto aparece a la derecha -->
         <div class="textoAdicional">
             <h1>Trás la temporada de 2024</h1>
             <p>Verstappen se corona campeón Mundial de 2024. El final del mundial fue ajustado
@@ -57,7 +75,10 @@
             </p>
         </div>
     </main>
+    
+    <!-- Sección 2: Pretemporada 2025 con foto y texto lado a lado (orden invertido) -->
     <main class="contenedorTextoFoto">
+        <!-- El texto aparece a la izquierda -->
         <div class="textoDeFoto">
             <h1>Pretemporada de 2025 - Test de Baréin</h1>
             <p>Trás el exito de Mclaren en 2024, proclamandose campeones en el mundial de constructores
@@ -66,17 +87,23 @@
             </p>
             <p>Además empiezan los rumores de posiblemente tener un coche que no cumple con las regulaciones</p>
         </div>
+        <!-- La foto aparece a la derecha -->
         <div class="contenedorDeFoto2">
             <img src="pretemporada_barein.webp" alt="pretemporada f1 2025 barein">
         </div>
     </main>
+    
+    <!-- Sección 3: Las primeras 5 carreras de la temporada -->
     <main class="primerasCarreras">
+        <!-- Título y descripción general de las primeras 5 carreras -->
         <div class="cincoprimerasCarreras">
             <h1>Grandes premios de Melbourne, China, Japón, Baréin y Arabia Saudi</h1>
             <p>Las primeras carreras de la temporada han dejado claro que Mclaren y Red Bull
                 serán los principales candidatos al título. Con victorias alternadas entre
                 Lando Norris, Oscar Piastri y Max Verstappen, la lucha por el campeonato se presenta emocionante.
         </div>
+        
+        <!-- Carrusel horizontal con fotos de las 5 carreras -->
         <div class="carruselDeFotos">
             <img src="gp_melbourne.jpeg" alt="gp melbourne f1 2025">
             <img src="gp_china.jpg" alt="gp china f1 2025">
@@ -84,6 +111,8 @@
             <img src="gp_barein.jpg" alt="gp barein f1 2025">
             <img src="gp_arabia.jpg" alt="gp arabia saudi f1 2025">
         </div>
+        
+        <!-- Información detallada del GP de Melbourne -->
         <div class="cincoprimerasCarreras">
             <h1>El GP de Melbourne</h1>
             <p>El inicio de temporada no fue precisamente tranquilo. Tanto en la clasificación
@@ -94,36 +123,44 @@
                 en cabeza aunque Lando Norris le presiona hasta la última vuelta y termina segundo.
             </p>
             <br>
+            <!-- Video mostrando un momento importante de la carrera -->
             <video controls>
                 <source src="gp_australia_spin.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                Tu navegador no soporta el elemento de video.
             </video>
             <br>
             <br>
+            <!-- Información del GP de China -->
             <h1>El GP de china</h1>
+            <!-- Tabla con los resultados de la carrera Sprint -->
             <table>
                 <thead>
+                    <!-- Encabezados de la tabla -->
                     <tr>
                         <th>Piloto</th>
                         <th>Escudería</th>
                         <th>Tiempo</th>
                     </tr>
                 </thead>
+                <!-- Fila 1: Lewis Hamilton -->
                 <tr>
                     <td>Lewis Hamilton</td>
                     <td>Ferrari</td>
                     <td>30:39.965</td>
                 </tr>
+                <!-- Fila 2: Oscar Piastri -->
                 <tr>
                     <td>Oscar Piastri</td>
                     <td>Mclaren</td>
                     <td>+06.889</td>
                 </tr>
+                <!-- Fila 3: Max Verstappen -->
                 <tr>
                     <td>Max Verstappen</td>
                     <td>Oracle Redbull Racing</td>
                     <td>+9.804</td>
                 </tr>
+                <!-- Título de la tabla -->
                 <caption>Podio de la carrera Sprint</caption>
             </table>
             <p>Trás una Sprint donde al parecer Lewis Hamilton lograba dominar con
@@ -132,6 +169,7 @@
                 seguido de Lando Norris y el hombre invisible, George Russell.
             </p>
             <br>
+            <!-- Información del GP de Japón -->
             <h1>El GP de Japón</h1>
             <p>El fin de semana se mostraba tenso con varios aspirantes a la victoria
                 entre ellos se encontraban Max Verstappen, Lando Norris y Oscar Piastri.
@@ -140,12 +178,15 @@
                 pero un error en boxes le hace tener que pelear la primera posición con Lando Norris.
                 Cuando pasó este grave incidente sin penalización:
             </p>
+            <br>
+            <!-- Video del incidente importante en Japón -->
             <video controls>
                 <source src="gp_japon_incidente.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                Tu navegador no soporta el elemento de video.
             </video>
             <br>
             <br>
+            <!-- Información de los últimos 2 GPs de las 5 primeras carreras -->
             <h1>GP de Baréin y Arabia Saudi</h1>
             <p>Las dos ultimas carreras de las 5 primeras fueron un poco más
                 calmadas en cuanto a incidentes. Pero claramente se ven fuertes
@@ -153,16 +194,111 @@
                 quién empezó la temporada como piloto número 2 de Mclaren, consigue
                 plantarle cara a su compañero de equipo y a Verstappen.
             </p>
+            <!-- Imagen que es un enlace a los highlights del GP de Baréin -->
             <a href="https://www.youtube.com/watch?v=bFXLP487kXo"><img src="gp_barein_highlights.jpg" alt="Highlights de Bahréin f1 2025"></a>
             <br>
+            <!-- Imagen que es un enlace a los highlights de Arabia Saudita -->
             <a href="https://www.youtube.com/watch?v=Li93iQDZQeg"><img src="gp_arabiasaudi_highlights.jpg" alt="Highlights de Arabia Saudita f1 2025"></a>
         </div>
+
+        <!-- Introducción a la siguiente etapa de carreras (Europa y América) -->
         <div class="gp6a10">
             <h1>Grandes premios de Miami, Imola, Mónaco, Barcelona y Canadá</h1>
             <p>La temporada Euro-Americana empieza y como primera prueba se encuentra el GP de Miami,
                 circuito exigente y con muchas curvas lentas que benefician a los coches con buena
                 carga aerodinámica como Mclaren.
             </p>
+        </div>
+    </main>
+
+    <!-- Sección 4: Audios y Podcasts de F1 2025 -->
+    <main class="seccionAudios" id="seccion-audios-f1">
+        <!-- Encabezado de la sección de audios -->
+        <div class="contenedorAudios">
+            <h1>Podcast y Audios de F1 - 2025</h1>
+            <p>Escucha los mejores momentos, análisis y comentarios de la temporada 2025</p>
+        </div>
+        
+        <!-- Primera lista: Audios destacados de la temporada -->
+        <div class="listaAudios">
+            <h2>Audios Destacados de la Temporada</h2>
+            <!-- Lista con los audios principales -->
+            <ul class="audiosList" id="lista-audios-principales">
+                <!-- Audio 1: Análisis del GP de Melbourne -->
+                <li class="itemAudio">
+                    <div class="audioContent">
+                        <h3>Análisis del GP de Melbourne</h3>
+                        <!-- Control del reproductor de audio nativo del navegador -->
+                        <audio controls>
+                            <source src="analisis_melbourne.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                        <p class="descripcionAudio">Análisis profundo del primer GP de la temporada con los mejores momentos y estrategias.</p>
+                    </div>
+                </li>
+                <!-- Audio 2: Entrevista con Lando Norris -->
+                <li class="itemAudio">
+                    <div class="audioContent">
+                        <h3>Entrevista con Lando Norris</h3>
+                        <!-- Control del reproductor de audio -->
+                        <audio controls>
+                            <source src="entrevista_norris.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                        <p class="descripcionAudio">Lando Norris habla sobre sus objetivos para la temporada y la competencia con Verstappen.</p>
+                    </div>
+                </li>
+                <!-- Audio 3: Podcast sobre estrategia de neumáticos -->
+                <li class="itemAudio">
+                    <div class="audioContent">
+                        <h3>Podcast: Estrategia de Neumáticos</h3>
+                        <!-- Control del reproductor de audio -->
+                        <audio controls>
+                            <source src="podcast_neumaticos.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                        <p class="descripcionAudio">Podcast especializado en estrategia de neumáticos y su impacto en las carreras.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Segunda lista: Audios organizados por categoría -->
+        <div class="listaAudiosSecundaria">
+            <h2>Audios por Categoría</h2>
+            <!-- Lista de categorías de audios -->
+            <ul class="audiosCategorias" id="lista-categorias-audios">
+                <!-- Categoría 1: Entrenamientos Libres -->
+                <li class="categoriaAudio">
+                    <strong>Entrenamientos Libres</strong>
+                    <!-- Sublista con audios de entrenamientos (FP1, FP2, FP3) -->
+                    <ul class="sublistaAudios">
+                        <li><audio controls style="max-width: 100%;"><source src="fp1_comentarios.mp3" type="audio/mpeg"></audio></li>
+                        <li><audio controls style="max-width: 100%;"><source src="fp2_resumen.mp3" type="audio/mpeg"></audio></li>
+                        <li><audio controls style="max-width: 100%;"><source src="fp3_analisis.mp3" type="audio/mpeg"></audio></li>
+                    </ul>
+                </li>
+                <!-- Categoría 2: Clasificaciones -->
+                <li class="categoriaAudio">
+                    <strong>Clasificaciones</strong>
+                    <!-- Sublista con audios de las sesiones de clasificación (Q1, Q2, Q3) -->
+                    <ul class="sublistaAudios">
+                        <li><audio controls style="max-width: 100%;"><source src="q1_resumen.mp3" type="audio/mpeg"></audio></li>
+                        <li><audio controls style="max-width: 100%;"><source src="q2_analisis.mp3" type="audio/mpeg"></audio></li>
+                        <li><audio controls style="max-width: 100%;"><source src="q3_resumen.mp3" type="audio/mpeg"></audio></li>
+                    </ul>
+                </li>
+                <!-- Categoría 3: Carreras -->
+                <li class="categoriaAudio">
+                    <strong>Carreras</strong>
+                    <!-- Sublista con audios relacionados a las carreras (resumen, estrategia, incidentes) -->
+                    <ul class="sublistaAudios">
+                        <li><audio controls style="max-width: 100%;"><source src="carrera_resumen.mp3" type="audio/mpeg"></audio></li>
+                        <li><audio controls style="max-width: 100%;"><source src="carrera_estrategia.mp3" type="audio/mpeg"></audio></li>
+                        <li><audio controls style="max-width: 100%;"><source src="carrera_incidentes.mp3" type="audio/mpeg"></audio></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </main>
 </body>

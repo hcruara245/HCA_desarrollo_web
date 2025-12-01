@@ -1,236 +1,276 @@
-/* añadir fuente de f1 al CSS - registra la fuente personalizada para usarla con font-family 'f1' */
+/* ==========================================================
+   FUENTES PERSONALIZADAS
+   ========================================================== */
+/* Importamos la fuente F1 de un archivo local en la carpeta Formula1
+   Esto permite que la página use la fuente oficial de Fórmula 1 */
 @font-face{
-    /* nombre para usar la fuente en font-family */
     font-family: "f1";
-    /* ruta/archivo de la fuente (formato woff) */
-    src: url("Formula1/Formula1-Regular_web_0.ttf") format("woff"),
+    src: url("Formula1/Formula1-Regular_web_0.ttf") format("woff");
 }
 
-/* Estilos del header: centrado, tipografía y posición absoluta
-     - Explicación: centra el texto, aplica la fuente 'f1' y fija el header
-         a 30px desde arriba para que no se solape con la navegación. */
+/* ==========================================================
+   ENCABEZADO (HEADER)
+   ========================================================== */
+/* Estilos del título principal que aparece al principio */
 header{
-    text-align: center;
-    padding: 10px 0;
-    font-family: "f1", sans-serif;
-    font-size: 16px;
-    color: rgba(255, 0, 0, 0.95);
-    position: absolute;
-    top: 30px;
-    width: 100%;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    background-color: #15151e;
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 10px 0; /* Espacio dentro del encabezado */
+    font-family: "f1", sans-serif; /* Usa la fuente F1 */
+    font-size: 16px; /* Tamaño del texto */
+    color: rgba(255, 0, 0, 0.95); /* Color rojo oscuro */
+    position: absolute; /* Posición fija en la página */
+    top: 30px; /* A 30 píxeles del borde superior */
+    width: 100%; /* Ocupa todo el ancho */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra detrás del texto para que resalte */
+    background-color: #15151e; /* Fondo oscuro casi negro */
 }
 
+/* ==========================================================
+   CUERPO DE LA PÁGINA (BODY)
+   ========================================================== */
+/* Estilos generales del cuerpo de la página */
 body{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+    margin: 0; /* Sin margen externo */
+    padding: 0; /* Sin espacio interno */
+    font-family: Arial, sans-serif; /* Fuente por defecto para la página */
 }
 
-/* Quitar margen global en 'main' para evitar huecos no deseados
-    - Explicación: eliminamos márgenes por defecto y aplicamos fondo. */
+/* ==========================================================
+   CONTENEDORES PRINCIPALES (MAIN)
+   ========================================================== */
+/* Estilos para todos los contenedores principales de contenido */
 main{
-    margin: 0;
-    background: linear-gradient(to right bottom, #15151e);
+    margin: 0; /* Sin margen externo */
+    background: linear-gradient(to right bottom, #15151e); /* Fondo degradado oscuro */
 }
 
-/* Mantener separación con la barra de navegación sólo en el primer main
-   - Explicación: añadimos padding-top al primer main para que el contenido
-     no quede debajo del nav fijo. */
+/* El primer contenedor (barra de navegación) tiene espacio superior para separarse del header */
 main:first-of-type{
-    padding-top: 100px; /* evita solapamiento con la navegación fija */
+    padding-top: 100px; /* Espacio superior que evita que se solape con el header fijo */
 }
 
+/* ==========================================================
+   BARRA DE NAVEGACIÓN (MENU PRINCIPAL)
+   ========================================================== */
+/* Lista de navegación que aparece en la parte superior en color rojo */
 ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: stretch;
-    background-color: rgba(255, 0, 0, 0.95);; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0; /* Sin margen externo */
+    padding: 0; /* Sin espacios internos */
+    display: flex; /* Alinea los elementos en una fila */
+    align-items: stretch; /* Estira los elementos verticalmente */
+    background-color: rgba(255, 0, 0, 0.95); /* Color rojo de la barra */
+    position: fixed; /* La barra se queda fija arriba aunque hagas scroll */
+    top: 0; /* Pega en la parte superior */
+    left: 0; /* Pega a la izquierda */
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 1000; /* Aparece encima de todo lo demás */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* Sombra debajo de la barra */
 }
 
-
+/* Elemento individual de la lista (cada botón del menú) */
 ul  li{
-    position: relative;
+    position: relative; /* Permite que los elementos internos se posicionen relativamente */
 }
 
-
+/* Estilo de los enlaces del menú */
 ul li a{
-    display: block;
-    padding: 14px 20px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    border-right: 1px solid rgba(255,255,255,0.08);
+    display: block; /* Convierte el enlace en un bloque para que sea más clickeable */
+    padding: 14px 20px; /* Espacio dentro del botón */
+    color: #fff; /* Color blanco */
+    text-decoration: none; /* Quita la raya de los enlaces */
+    font-weight: 600; /* Letra un poco más gruesa */
+    border-right: 1px solid rgba(255,255,255,0.08); /* Línea vertical que separa los botones */
 }
 
+/* Efecto cuando pasas el ratón sobre un enlace del menú */
 ul  li  a:hover{
-    background-color: rgba(230, 0, 0, 1);;
+    background-color: rgba(230, 0, 0, 1); /* Color rojo más oscuro */
 }
 
-
+/* Menú desplegable (las opciones que aparecen al hacer hover) */
 .contenido{
-    display: none; 
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: rgba(230, 0, 0, 0.95);;
-    min-width: 180px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
-    border-radius: 4px;
-    flex-direction: column;
-    padding: 6px 0;
+    display: none; /* Por defecto está escondido */
+    position: absolute; /* Se posiciona debajo del botón */
+    top: 100%; /* Justo debajo del elemento padre */
+    left: 0; /* Alineado a la izquierda */
+    background: rgba(230, 0, 0, 0.95); /* Color rojo ligeramente diferente */
+    min-width: 180px; /* Ancho mínimo */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12); /* Sombra para que destaque */
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    flex-direction: column; /* Ordena los elementos en columna */
+    padding: 6px 0; /* Espacio interno */
 }
 
-
+/* Cuando pasas el ratón sobre un elemento con clase "des" (desplegable), se muestra el menú */
 .des:hover .contenido,
 .des:focus-within .contenido{
-    display: flex;
+    display: flex; /* Muestra el menú */
 }
 
+/* Estilos de los enlaces dentro del menú desplegable */
 .contenido a{
-    display: block;
-    padding: 10px 14px;
-    color: #222;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    display: block; /* Convierte en bloque para mejor área de click */
+    padding: 10px 14px; /* Espacio dentro */
+    color: #222; /* Color gris oscuro */
+    text-decoration: none; /* Sin subrayado */
+    border-bottom: 1px solid rgba(0,0,0,0.06); /* Línea que separa cada opción */
 }
 
+/* Efecto al pasar el ratón sobre una opción del menú desplegable */
 .contenido a:hover{
-    background: rgba(255, 0, 0, 1);;
+    background: rgba(255, 0, 0, 1); /* Color rojo más fuerte */
 }
 
+/* ==========================================================
+   SECCIÓN FOTO + TEXTO (Lado a lado)
+   ========================================================== */
+/* Contenedor que muestra una foto y texto lado a lado */
 .contenedorFotoTexto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    padding: 20px;
+    display: flex; /* Alinea elementos en fila */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 60px; /* Espacio entre la foto y el texto */
+    padding: 20px; /* Espacio interno */
 }
 
+/* La foto (lado izquierdo) */
 .contenedorDeFoto{
-    width: 50%;
-    height: 100%;
-    position: block;
-    left: 0px;
-    top: 20px;
-    padding: 20px;
+    width: 50%; /* Ocupa la mitad del ancho */
+    height: 100%; /* Altura completa */
+    position: block; /* Posicionamiento en bloque */
+    left: 0px; /* Sin margen izquierdo */
+    top: 20px; /* Con margen superior */
+    padding: 20px; /* Espacio interno */
 }
 
+/* Estilos de la imagen */
 .contenedorDeFoto img{
-    width: 100%;
-    height: 100%;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(255, 82, 82, 0.849);
-    border: 2px solid rgba(255, 0, 0, 0.95);
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Altura automática */
+    border-radius: 6px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(255, 82, 82, 0.849); /* Sombra roja */
+    border: 2px solid rgba(255, 0, 0, 0.95); /* Borde rojo */
 }
 
+/* El texto (lado derecho) */
 .textoAdicional{
-    width:50%;
-    height: 100%;
-    position: block;
-    top: 20px;
-    color: rgba(255, 0, 0, 0.95);
-    font-family: "f1", sans-serif;
-    text-align: justify;
-    padding: 30px;
-    white-space: pre-line; /* conserva saltos de línea en el texto */
+    width:50%; /* Ocupa la mitad del ancho */
+    height: 100%; /* Altura completa */
+    position: block; /* Posicionamiento en bloque */
+    top: 20px; /* Margen superior */
+    color: rgba(255, 0, 0, 0.95); /* Color rojo para títulos */
+    font-family: "f1", sans-serif; /* Usa la fuente F1 */
+    text-align: justify; /* Texto alineado a los dos lados */
+    padding: 30px; /* Espacio interno */
+    white-space: pre-line; /* Respeta los saltos de línea del HTML */
 }
 
+/* Párrafos dentro del texto adicional en color blanco */
 .textoAdicional p {
-    color: white;
+    color: white; /* Texto en blanco */
 }
 
+/* ==========================================================
+   SECCIÓN TEXTO + FOTO (Orden invertido)
+   ========================================================== */
+/* Igual que arriba pero con el texto a la izquierda y foto a la derecha */
 .contenedorTextoFoto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    padding: 20px;
+    display: flex; /* Alinea en fila */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 60px; /* Espacio entre elementos */
+    padding: 20px; /* Espacio interno */
 }
 
+/* Foto del lado derecho */
 .contenedorDeFoto2 img{
-    width: 100%;
-    height: 100%;
-    border-radius: 6px;
-    box-shadow: 0px 0px 8px rgba(255, 166, 82, 0.849);
-    border: 2px solid rgba(255, 0, 0, 0.95);
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura automática */
+    border-radius: 6px; /* Esquinas redondeadas */
+    box-shadow: 0px 0px 8px rgba(255, 166, 82, 0.849); /* Sombra naranja */
+    border: 2px solid rgba(255, 0, 0, 0.95); /* Borde rojo */
 }
 
+/* Contenedor de la foto 2 */
 .contenedorDeFoto2{
-    width: 100%;
-    height: 100%;
-    position: block;
-    left: 0px;
-    top: 20px;
-    padding: 20px;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura automática */
+    position: block; /* Posicionamiento en bloque */
+    left: 0px; /* Sin margen */
+    top: 20px; /* Margen superior */
+    padding: 20px; /* Espacio interno */
 }
 
+/* Texto del lado izquierdo */
 .textoDeFoto{
-    width:50%;
-    height: 100%;
-    position: block;
-    top: 20px;
-    color: rgba(255, 0, 0, 0.95);
-    font-family: "f1", sans-serif;
-    text-align: justify;
-    padding: 20px;
+    width:50%; /* Mitad del ancho */
+    height: 100%; /* Altura completa */
+    position: block; /* Posicionamiento en bloque */
+    top: 20px; /* Margen superior */
+    color: rgba(255, 0, 0, 0.95); /* Color rojo para títulos */
+    font-family: "f1", sans-serif; /* Fuente F1 */
+    text-align: justify; /* Alineado a dos lados */
+    padding: 20px; /* Espacio interno */
 }
 
+/* Párrafos del texto en color blanco */
 .textoDeFoto p {
-    color: white;
+    color: white; /* Blanco */
 }
 
+/* ==========================================================
+   SECCIÓN DE LAS PRIMERAS 5 CARRERAS
+   ========================================================== */
+/* Contenedor principal para toda la sección de carreras */
 .primerasCarreras{
-    padding: 20px;
-    color: rgba(255, 0, 0, 0.95);
-    font-family: "f1", sans-serif;
-    text-align: center;
+    padding: 20px; /* Espacio interno */
+    color: rgba(255, 0, 0, 0.95); /* Títulos en rojo */
+    font-family: "f1", sans-serif; /* Fuente F1 */
+    text-align: center; /* Texto centrado */
 }
 
+/* Párrafos en esta sección en blanco */
 .primerasCarreras p{
-    color: white;
+    color: white; /* Blanco */
 }
 
+/* Bloques de información sobre las 5 carreras */
 .cincoprimerasCarreras{
-    padding: 20px;
-    color: rgba(255, 0, 0, 0.95);
-    font-family: "f1", sans-serif;
-    text-align: center;
+    padding: 20px; /* Espacio interno */
+    color: rgba(255, 0, 0, 0.95); /* Títulos rojos */
+    font-family: "f1", sans-serif; /* Fuente F1 */
+    text-align: center; /* Centrado */
 }
 
+/* Párrafos en color blanco */
 .cincoprimerasCarreras p{
-    color: white;
+    color: white; /* Blanco */
 }
 
+/* ==========================================================
+   CARRUSEL DE FOTOS (Desplazable horizontalmente)
+   ========================================================== */
+/* Contenedor de las fotos que se puede desplazar */
 .carruselDeFotos{
-    display: flex;
-    justify-content: flex-start;
-     /* Para que la primera foto no se quede fuera
-         - Explicación: asegura que el inicio del carrusel sea visible. */
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    overflow-x: auto;
-    
+    display: flex; /* Alinea en fila */
+    justify-content: flex-start; /* Alinea a la izquierda */
+    align-items: center; /* Centra verticalmente */
+    gap: 20px; /* Espacio entre fotos */
+    padding: 20px; /* Espacio interno */
+    overflow-x: auto; /* Permite scroll horizontal */
 }
 
+/* Cada foto en el carrusel */
 .carruselDeFotos img{
-    width: 300px;
-    height: 200px;
-    border-radius: 6px;
-    box-shadow: 0px 0px 8px rgba(210, 210, 255, 0.452);
-    border: 2px solid rgba(255, 0, 0, 0.95);
+    width: 300px; /* Ancho fijo */
+    height: 200px; /* Altura fija */
+    border-radius: 6px; /* Esquinas redondeadas */
+    box-shadow: 0px 0px 8px rgba(210, 210, 255, 0.452); /* Sombra azulada */
+    border: 2px solid rgba(255, 0, 0, 0.95); /* Borde rojo */
 }
 
+/* Quitar márgenes y padding de títulos y párrafos para tener control total */
 .contenedorFotoTexto h1,
 .contenedorFotoTexto p,
 .contenedorTextoFoto h1,
@@ -242,127 +282,447 @@ ul  li  a:hover{
 .primerasCarreras,
 .primerasCarreras p,
 .primerasCarreras h1 {
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Sin margen externo */
+    padding: 0; /* Sin espacio interno */
 }
 
-/* Eliminar márgenes por defecto de títulos y párrafos dentro de los contenedores
-   - Explicación: normaliza márgenes y rellenos para evitar huecos indeseados */
-/* (esta regla ya está aplicada en el selector anterior) */
-
+/* Estilos avanzados del carrusel: ocultar la scrollbar de forma elegante */
 .carruselDeFotos {
-    overflow-x: auto;
-    /* padding inferior reducido para minimizar el espacio reservado a la scrollbar */
-    padding-bottom: 18px;
-    /* Firefox: ocultar por defecto */
-    scrollbar-width: none;
-    /* IE 10+ / Edge (legacy): ocultar */
-    -ms-overflow-style: none;
-    /* Color sugerido para la scrollbar (apunte; no estará visible mientras esté oculta) */
-    scrollbar-color: rgba(0,0,0,0.25) transparent;
+    overflow-x: auto; /* Permite scroll horizontal */
+    padding-bottom: 18px; /* Espacio para la scrollbar */
+    scrollbar-width: none; /* Oculta scrollbar en Firefox */
+    -ms-overflow-style: none; /* Oculta scrollbar en Edge antiguo */
+    scrollbar-color: rgba(0,0,0,0.25) transparent; /* Color de la scrollbar */
 }
 
-/* WebKit: ocultar la scrollbar por defecto estableciendo altura 0 */
-.carruselDeFotos::-webkit-scrollbar {
-    height: 0;
-}
+/* Ocultar scrollbar en navegadores WebKit (Chrome, Safari, etc.) */
+.carruselDeFotos::-webkit-scrollbar { height: 0; } /* Altura 0 por defecto */
+.carruselDeFotos:hover { scrollbar-width: thin; -ms-overflow-style: auto; scrollbar-color: rgba(0,0,0,0.35) transparent; }
+.carruselDeFotos:hover::-webkit-scrollbar { height: 8px; } /* Muestra cuando pasas el ratón */
+.carruselDeFotos::-webkit-scrollbar-track { background: transparent; } /* Fondo de la scrollbar */
 
-/* Al pasar el cursor mostrar una scrollbar fina y discreta */
-.carruselDeFotos:hover {
-    /* Firefox: mostrar scrollbar fina */
-    scrollbar-width: thin;
-    /* IE/Edge: restaurar comportamiento por defecto */
-    -ms-overflow-style: auto;
-    /* Color del thumb en Firefox cuando es visible */
-    scrollbar-color: rgba(0,0,0,0.35) transparent;
+/* Estilo de la barra que se arrastra en la scrollbar */
+.carruselDeFotos::-webkit-scrollbar-thumb{
+    background: rgba(0,0,0,0.22); /* Color semi-transparente */
+    border-radius: 6px; /* Esquinas redondeadas */
+    border: 1px solid rgba(255,255,255,0.03); /* Borde muy sutil */
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.12); /* Sombra interna */
+    transition: opacity 150ms ease, background-color 150ms ease; /* Transición suave */
+    opacity: 0; /* Invisible por defecto */
 }
+.carruselDeFotos:hover::-webkit-scrollbar-thumb{ opacity: 1; background: rgba(0,0,0,0.34); } /* Visible al hacer hover */
+.carruselDeFotos::-webkit-scrollbar-thumb:hover{ background: rgba(0,0,0,0.45); } /* Más oscuro al pasar el ratón */
 
-.carruselDeFotos:hover::-webkit-scrollbar {
-    height: 8px; /* fina y discreta */
-}
-
-.carruselDeFotos::-webkit-scrollbar-track {
-    background: transparent; /* pista transparente para integrarse */
-}
-
-/* Pulgar translúcido con borde sutil y sombra interior para integrarse con el fondo */
-.carruselDeFotos::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.22);
-    border-radius: 6px;
-    border: 1px solid rgba(255,255,255,0.03);
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.12);
-    transition: opacity 150ms ease, background-color 150ms ease;
-    opacity: 0; /* mantenerlo casi invisible hasta hover */
-}
-
-.carruselDeFotos:hover::-webkit-scrollbar-thumb {
-    opacity: 1;
-    background: rgba(0,0,0,0.34); /* ligeramente más visible al hover */
-}
-
-/* Oscurecer ligeramente el pulgar al pasar el ratón para dar indicación visual */
-.carruselDeFotos::-webkit-scrollbar-thumb:hover {
-    background: rgba(0,0,0,0.45);
-}
-
+/* ==========================================================
+   VIDEOS EN LA SECCIÓN DE CARRERAS
+   ========================================================== */
+/* Estilos para los videos */
 .primerasCarreras video{
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0px 0px 8px rgba(255, 82, 82, 0.849);
-    border: 2px solid rgba(255, 0, 0, 0.95);
+    max-width: 720px; /* Ancho máximo en pantallas grandes */
+    width: 100%; /* Ocupa todo el ancho disponible en móviles */
+    height: auto; /* Altura automática para mantener proporciones */
+    display: block; /* Convierte en bloque para centrarlo */
+    margin: 0 auto; /* Centra el video */
+    border-radius: 6px; /* Esquinas redondeadas */
+    box-shadow: 0px 0px 8px rgba(255, 82, 82, 0.849); /* Sombra roja */
+    border: 2px solid rgba(255, 0, 0, 0.95); /* Borde rojo */
 }
 
+/* ==========================================================
+   TABLAS CON RESULTADOS DE CARRERAS
+   ========================================================== */
+/* Tabla que muestra los resultados de las carreras Sprint */
 .cincoprimerasCarreras table{
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    align-items: center;
-    text-align: center;
-    border: 2px rgba(0, 0, 0, 0.95);
-    border-style: solid
+    width: 100%; /* Ocupa todo el ancho */
+    border-collapse: collapse; /* Borra espacios entre celdas */
+    margin-top: 20px; /* Margen superior */
+    align-items: center; /* Centra contenido */
+    text-align: center; /* Texto centrado */
+    border: 2px rgba(0, 0, 0, 0.95); /* Borde oscuro */
+    border-style: solid; /* Estilo del borde */
 }
 
+/* Título de la tabla */
 .cincoprimerasCarreras caption{
-    margin-bottom: 10px;
-    font-size: 22px;
+    margin-bottom: 10px; /* Espacio debajo */
+    font-size: 22px; /* Texto más grande */
 }
 
+/* Celdas de datos en la tabla */
 .cincoprimerasCarreras td{
-    background-color: rgba(255, 0, 0, 0.95);
-    color: white;
-    text-align: center;
+    background-color: rgba(255, 0, 0, 0.95); /* Fondo rojo */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centrado */
 }
 
+/* Encabezado de la tabla */
 .cincoprimerasCarreras thead{
-    background-color: rgba(200, 0, 0, 0.95);
-    color: white;
+    background-color: rgba(200, 0, 0, 0.95); /* Rojo más oscuro */
+    color: white; /* Texto blanco */
 }
 
+/* Enlaces en la tabla */
 .cincoprimerasCarreras a{
-    color: white;
-    text-decoration: none;
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
 }
 
+/* Imágenes en esta sección */
 .cincoprimerasCarreras img{
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0px 0px 8px rgba(23, 83, 148, 0.527);
-    border: 2px solid rgba(255, 0, 0, 0.95);
-    margin-top: 10px;
-    margin-bottom: 10px;
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura automática */
+    border-radius: 6px; /* Esquinas redondeadas */
+    box-shadow: 0px 0px 8px rgba(23, 83, 148, 0.527); /* Sombra azulada */
+    border: 2px solid rgba(255, 0, 0, 0.95); /* Borde rojo */
+    margin-top: 10px; /* Margen superior */
+    margin-bottom: 10px; /* Margen inferior */
 }
 
+/* Imágenes que son enlaces (como miniaturas de videos de YouTube) */
+.cincoprimerasCarreras a img{
+    max-width: 640px; /* Ancho máximo para que resalten */
+    width: 100%; /* Se adapta al ancho disponible en móviles */
+    height: auto; /* Altura automática */
+    display: block; /* Convierte en bloque */
+    margin: 8px auto; /* Centra la imagen */
+    border-radius: 6px; /* Esquinas redondeadas */
+    transition: max-width .18s ease, transform .18s ease; /* Cambios suaves */
+}
+
+/* En móviles muy pequeños, las imágenes son un poco más pequeñas */
+@media (max-width:480px){
+    .cincoprimerasCarreras a img{
+        max-width: 420px; /* Ancho máximo reducido */
+    }
+}
+
+/* ==========================================================
+   SECCIÓN 6-10 GRANDES PREMIOS (Color cyan)
+   ========================================================== */
+/* Títulos en color cyan (turquesa) con efecto de sombra */
 .gp6a10 h1{
-    color: cyan;
+    color: cyan; /* Color cyan */
     text-shadow: 1px 0px rgb(0, 199, 199), -1px 0px rgb(0, 199, 199), 0px 1px rgb(0, 199, 199), 0px -1px rgb(0, 199, 199);
+    /* Sombra en los 4 lados para que resalte */
 }
 
+/* Párrafos en color blanco */
 .gp6a10 p{
-    color: white;
-    text-align: center;
-    font-size: 18px;
-    margin: 6px;
-    padding: 10px;
+    color: white; /* Blanco */
+    text-align: center; /* Centrado */
+    font-size: 18px; /* Texto grande */
+    margin: 6px; /* Margen pequeño */
+    padding: 10px; /* Espacio interno */
+}
+
+/* ==========================================================
+   VIDEOS EN GENERAL
+   ========================================================== */
+/* Estilos globales para todos los videos */
+video{
+    max-width: 720px; /* Ancho máximo */
+    width: 100%; /* Ancho adaptable */
+    height: auto; /* Altura automática */
+    display: block; /* En bloque */
+    margin: 0 auto; /* Centrado */
+}
+
+/* ==========================================================
+   SECCIÓN DE AUDIOS - ESTILO CYAN/TURQUESA
+   ========================================================== */
+/* Esta sección es diferente a las demás: usa colores cyan en lugar de rojo
+   y contiene audios y podcasts sobre F1 2025 */
+
+/* Contenedor principal de la sección de audios */
+.seccionAudios {
+    background: linear-gradient(to right bottom, #0a1a24, #1a3a4a); /* Fondo degradado azul oscuro */
+    padding: 40px 20px; /* Espacio interno */
+    color: rgba(0, 200, 220, 1); /* Color cyan por defecto */
+    font-family: "f1", sans-serif; /* Fuente F1 */
+    margin: 0; /* Sin margen externo */
+}
+
+/* ID para identificar la sección principal de audios */
+#seccion-audios-f1 {
+    /* Este ID permite seleccionar específicamente esta sección si es necesario */
+}
+
+/* ==========================================================
+   ENCABEZADO DE LA SECCIÓN DE AUDIOS
+   ========================================================== */
+/* Contenedor del título y descripción principal */
+.contenedorAudios {
+    text-align: center; /* Texto centrado */
+    padding: 20px 0; /* Espacio interno */
+    border-bottom: 3px solid rgba(0, 200, 220, 0.6); /* Línea divisoria cyan */
+    margin-bottom: 40px; /* Espacio debajo */
+}
+
+/* Título principal de la sección */
+.contenedorAudios h1 {
+    color: rgba(0, 255, 255, 1); /* Color cyan brillante */
+    font-size: 32px; /* Texto muy grande */
+    text-shadow: 0px 0px 10px rgba(0, 200, 220, 0.6); /* Resplandor alrededor del texto */
+    margin: 0 0 10px 0; /* Sin margen, espacio debajo */
+}
+
+/* Descripción debajo del título */
+.contenedorAudios p {
+    color: rgba(150, 220, 230, 1); /* Cyan claro */
+    font-size: 16px; /* Texto mediano */
+    margin: 0; /* Sin margen */
+}
+
+/* ==========================================================
+   LISTA DE AUDIOS DESTACADOS
+   ========================================================== */
+/* Contenedor de la primera lista de audios */
+.listaAudios {
+    padding: 20px; /* Espacio interno */
+    margin-bottom: 40px; /* Espacio debajo */
+}
+
+/* Subtítulo de la lista de audios */
+.listaAudios h2 {
+    color: rgba(0, 255, 255, 1); /* Cyan brillante */
+    font-size: 24px; /* Texto grande */
+    text-align: center; /* Centrado */
+    text-shadow: 0px 0px 8px rgba(0, 200, 220, 0.5); /* Resplandor suave */
+    margin: 0 0 30px 0; /* Sin margen superior, espacio debajo */
+    padding-bottom: 15px; /* Espacio interno debajo */
+    border-bottom: 2px solid rgba(0, 200, 220, 0.4); /* Línea divisoria cyan */
+}
+
+/* Lista de audios principales con ID y class específicos */
+.audiosList#lista-audios-principales {
+    list-style: none; /* Quita los puntos de lista */
+    margin: 0; /* Sin margen externo */
+    padding: 0; /* Sin espacios internos */
+    display: flex; /* Alinea los elementos en columna */
+    flex-direction: column; /* En sentido vertical */
+    gap: 25px; /* Espacio entre audios */
+    background-color: transparent !important; /* Fondo transparente (no hereda estilos de nav) */
+    position: static !important; /* Posición normal (no hereda fixed) */
+    width: auto !important; /* Ancho automático */
+    z-index: auto !important; /* Sin orden de capas especial */
+    box-shadow: none !important; /* Sin sombra */
+}
+
+/* ==========================================================
+   ELEMENTO INDIVIDUAL DE AUDIO
+   ========================================================== */
+/* Cada item de la lista de audios */
+.itemAudio {
+    background: rgba(10, 50, 80, 0.7); /* Fondo azul oscuro semi-transparente */
+    border: 2px solid rgba(0, 200, 220, 0.8); /* Borde cyan */
+    border-radius: 8px; /* Esquinas bien redondeadas */
+    padding: 20px; /* Espacio interno */
+    transition: all 0.3s ease; /* Cambios suaves al hacer hover */
+    box-shadow: 0 0 15px rgba(0, 200, 220, 0.2); /* Sombra suave cyan */
+}
+
+/* Efecto cuando pasas el ratón sobre un audio */
+.itemAudio:hover {
+    box-shadow: 0 0 25px rgba(0, 200, 220, 0.5); /* Sombra más fuerte */
+    border-color: rgba(0, 255, 255, 1); /* Borde cyan brillante */
+    transform: translateY(-2px); /* Sube ligeramente */
+}
+
+/* Contenedor del contenido del audio (título, reproductor, descripción) */
+.audioContent {
+    display: flex; /* Alinea los elementos */
+    flex-direction: column; /* En columna (vertical) */
+    gap: 12px; /* Espacio entre elementos */
+}
+
+/* Título del audio */
+.audioContent h3 {
+    color: rgba(0, 255, 255, 1); /* Cyan brillante */
+    font-size: 18px; /* Texto mediano-grande */
+    margin: 0; /* Sin margen */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Reproductor de audio */
+.audioContent audio {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 40px; /* Altura del reproductor */
+    background: rgba(0, 50, 80, 0.5); /* Fondo azul oscuro */
+    border-radius: 4px; /* Esquinas ligeramente redondeadas */
+    accent-color: rgba(0, 200, 220, 1); /* Color cyan para los botones */
+}
+
+/* Descripción del audio en cursiva */
+.descripcionAudio {
+    color: rgba(150, 220, 230, 0.9); /* Cyan claro */
+    font-size: 14px; /* Texto pequeño */
+    margin: 0; /* Sin margen */
+    line-height: 1.5; /* Espacio entre líneas */
+    font-style: italic; /* Texto en cursiva */
+}
+
+/* ==========================================================
+   LISTA DE AUDIOS POR CATEGORÍA
+   ========================================================== */
+/* Contenedor de la segunda lista (audios por categoría) */
+.listaAudiosSecundaria {
+    padding: 20px; /* Espacio interno */
+    background: rgba(0, 20, 40, 0.5); /* Fondo azul muy oscuro semi-transparente */
+    border-radius: 8px; /* Esquinas redondeadas */
+    border: 2px solid rgba(0, 200, 220, 0.5); /* Borde cyan suave */
+}
+
+/* Subtítulo de la lista de categorías */
+.listaAudiosSecundaria h2 {
+    color: rgba(0, 255, 255, 1); /* Cyan brillante */
+    font-size: 24px; /* Texto grande */
+    text-align: center; /* Centrado */
+    text-shadow: 0px 0px 8px rgba(0, 200, 220, 0.5); /* Resplandor suave */
+    margin: 0 0 25px 0; /* Sin margen superior, espacio debajo */
+    padding-bottom: 15px; /* Espacio interno debajo */
+    border-bottom: 2px solid rgba(0, 200, 220, 0.4); /* Línea cyan */
+}
+
+/* Lista de categorías con ID y class específicos */
+#lista-categorias-audios {
+    list-style: none; /* Quita los puntos */
+    margin: 0; /* Sin margen externo */
+    padding: 0; /* Sin espacios internos */
+    display: flex; /* Alinea los elementos */
+    flex-direction: column; /* En sentido vertical */
+    gap: 20px; /* Espacio entre categorías */
+    background-color: transparent !important; /* Fondo transparente (no hereda nav) */
+    position: static !important; /* Posición normal */
+    width: auto !important; /* Ancho automático */
+    z-index: auto !important; /* Sin orden especial */
+    box-shadow: none !important; /* Sin sombra */
+    align-items: flex-start !important; /* Alinea a la izquierda */
+}
+
+/* ==========================================================
+   CATEGORÍA DE AUDIO
+   ========================================================== */
+/* Cada categoría (Entrenamientos, Clasificaciones, Carreras) */
+.categoriaAudio {
+    background: rgba(10, 40, 70, 0.6); /* Fondo azul oscuro */
+    border-left: 4px solid rgba(0, 200, 220, 0.8); /* Borde izquierdo cyan */
+    padding: 15px; /* Espacio interno */
+    border-radius: 15px; /* Esquinas ligeramente redondeadas */
+    transition: all 0.3s ease; /* Cambios suaves */
+}
+
+/* Efecto cuando pasas el ratón sobre una categoría */
+.categoriaAudio:hover {
+    background: rgba(15, 60, 100, 0.8); /* Fondo más azul */
+    border-left-color: rgba(0, 255, 255, 1); /* Borde izquierdo cyan brillante */
+    box-shadow: 0 0 15px rgba(0, 200, 220, 0.3); /* Sombra cyan suave */
+}
+
+/* Título de la categoría en negrita */
+.categoriaAudio strong {
+    color: rgba(0, 255, 255, 1); /* Cyan brillante */
+    font-size: 16px; /* Texto mediano */
+    display: block; /* En su propia línea */
+    margin-bottom: 12px; /* Espacio debajo */
+    text-shadow: 0px 0px 5px rgba(0, 200, 220, 0.4); /* Resplandor suave */
+}
+
+/* ==========================================================
+   SUBLISTA DE AUDIOS (dentro de categorías)
+   ========================================================== */
+/* Sublista con los audios individuales de cada categoría */
+.sublistaAudios {
+    list-style: none; /* Quita los puntos */
+    margin: 0; /* Sin margen externo */
+    padding-left: 15px; /* Indentación a la izquierda */
+    display: flex; /* Alinea los elementos */
+    flex-direction: column; /* En columna */
+    gap: 10px; /* Espacio entre audios */
+    background-color: transparent; /* Fondo transparente */
+    position: static; /* Posición normal */
+    width: auto; /* Ancho automático */
+    z-index: auto; /* Sin orden especial */
+    box-shadow: none; /* Sin sombra */
+    align-items: stretch; /* Estira los elementos */
+}
+
+/* Elementos individuales de la sublista */
+.sublistaAudios li {
+    display: flex; /* Alinea en fila */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* Audio en la sublista */
+.sublistaAudios audio {
+    max-width: 100%; /* Ancho máximo 100% */
+    height: 32px; /* Altura del reproductor */
+    background: rgba(9, 39, 61, 0.7); /* Fondo azul oscuro */
+    border-radius: 15px; /* Esquinas redondeadas */
+    accent-color: rgba(0, 200, 220, 1); /* Botones en cyan */
+    border: 1px solid rgba(0, 200, 220, 0.5); /* Borde cyan suave */
+}
+
+/* Efecto cuando pasas el ratón sobre un audio */
+.sublistaAudios audio:hover {
+    border-color: rgba(0, 255, 255, 1); /* Borde cyan brillante */
+}
+
+/* ==========================================================
+   DISEÑO RESPONSIVO PARA AUDIOS
+   ========================================================== */
+/* Ajustes para tablets y pantallas medianas (hasta 768px de ancho) */
+@media (max-width: 768px) {
+    .contenedorAudios h1 {
+        font-size: 24px; /* Título más pequeño */
+    }
+
+    .listaAudios h2,
+    .listaAudiosSecundaria h2 {
+        font-size: 20px; /* Subtítulos más pequeños */
+    }
+
+    #lista-audios-principales {
+        gap: 15px; /* Menos espacio entre elementos */
+    }
+
+    .itemAudio {
+        padding: 15px; /* Menos espacio interno */
+    }
+
+    .audioContent h3 {
+        font-size: 16px; /* Títulos más pequeños */
+    }
+
+    .descripcionAudio {
+        font-size: 12px; /* Texto más pequeño */
+    }
+}
+
+/* Ajustes para móviles pequeños (hasta 480px de ancho) */
+@media (max-width: 480px) {
+    .seccionAudios {
+        padding: 20px 10px; /* Menos espacio lateral */
+    }
+
+    .contenedorAudios h1 {
+        font-size: 20px; /* Título aún más pequeño */
+    }
+
+    .listaAudios h2,
+    .listaAudiosSecundaria h2 {
+        font-size: 18px; /* Subtítulos pequeños */
+    }
+
+    .itemAudio {
+        padding: 12px; /* Aún menos espacio interno */
+        border: 1px solid rgba(0, 200, 220, 0.6); /* Borde más fino */
+    }
+
+    .audioContent h3 {
+        font-size: 14px; /* Títulos muy pequeños */
+    }
+
+    .descripcionAudio {
+        font-size: 11px; /* Texto muy pequeño */
+    }
 }
