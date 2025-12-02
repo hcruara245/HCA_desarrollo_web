@@ -381,8 +381,8 @@ ul  li  a:hover{
 
 /* Imágenes que son enlaces (como miniaturas de videos de YouTube) */
 .cincoprimerasCarreras a img{
-    max-width: 640px; /* Ancho máximo para que resalten */
-    width: 100%; /* Se adapta al ancho disponible en móviles */
+    max-width: 640px;  /* Ancho máximo para que resalten */
+    width: 100% ; /* Se adapta al ancho disponible en móviles */
     height: auto; /* Altura automática */
     display: block; /* Convierte en bloque */
     margin: 8px auto; /* Centra la imagen */
@@ -393,7 +393,7 @@ ul  li  a:hover{
 /* En móviles muy pequeños, las imágenes son un poco más pequeñas */
 @media (max-width:480px){
     .cincoprimerasCarreras a img{
-        max-width: 420px; /* Ancho máximo reducido */
+        max-width: 560px; /* Ancho máximo reducido */
     }
 }
 
@@ -525,6 +525,80 @@ ul  li  a:hover{
     margin-top: 10px; /* Margen superior */
     margin-bottom: 10px; /* Margen inferior */
     display: block; /* Asegura comportamiento de imagen normal */
+}
+
+#gpAustria{
+    padding: 20px; /* Espacio interno */
+    font-family: "f1", sans-serif; /* Fuente F1 */
+    text-align: center; /* Centrado */
+    border-top: #ff00009a 4px solid; /* Línea divisoria blanca arriba */
+    background: repeating-linear-gradient(35deg, #ff0000, #ffffff, #ff0000);
+}
+
+#gpAustria h1{
+    color: white; /* Blanco */
+    text-align: center; /* Centrado */
+    text-shadow: 1px 0px red, -1px 0px red, 0px 1px red, 0px -1px red, 2px 2px 4px rgba(0,0,0,0.5);  /* Sombra detrás del texto para que resalte */
+    padding: 10px; /* Espacio interno */
+    margin: 1px;
+}
+
+#gpAustria p{
+    color: black; /* Blanco */
+    text-align: center; /* Centrado */
+    font-size: 18px; /* Texto grande */
+    margin: 4px; /* Margen pequeño */
+    padding: 10px; /* Espacio interno */
+    text-shadow: #fff 1px 1px 5px;
+}
+
+#gpAustria img{
+    max-width: 720px; /* Ancho máximo */
+    width: 80%; /* Ancho completo */
+    height: auto; /* Altura automática */
+    border-radius: 6px; /* Esquinas redondeadas */
+    box-shadow: 0px 0px 8px rgba(255, 82, 82, 0.849); /* Sombra roja */
+    border: 2px solid red; /* Bordes de la imagen */
+    margin-top: 10px; /* Margen superior */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+#gpSilverstone{
+    padding: 20px; /* Espacio interno */
+    font-family: "f1", sans-serif; /* Fuente F1 */
+    text-align: center; /* Centrado */
+    border-top: #ff00009a 4px solid; /* Línea divisoria blanca arriba */
+    background-image: url(bandera_gp_silverstone.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#gpSilverstone h1{
+    color: white; /* Blanco */
+    text-align: center; /* Centrado */
+    text-shadow: 1px 0px blue, -1px 0px blue, 0px 1px blue, 0px -1px blue, 2px 2px 4px rgba(0,0,0,0.5);  /* Sombra detrás del texto para que resalte */
+    padding: 10px; /* Espacio interno */
+    margin: 1px;
+}
+
+#gpSilverstone p{
+    color: white; /* Blanco */
+    text-align: center; /* Centrado */
+    font-size: 18px; /* Texto grande */
+    margin: 4px; /* Margen pequeño */
+    padding: 10px; /* Espacio interno */
+    text-shadow: 2px 0px black, -2px 0px black, 0px 2px black, 0px -2px black;
+}
+
+#gpSilverstone table{
+    margin: 0 auto; /* Centra la tabla */
+    border: 2px rgba(0, 0, 0, 0.95); /* Borde negro */
+    border-radius: 1px; /* Esquinas ligeramente redondeadas */
+    box-shadow: 0px 0px 8px red; /* Sombra blanca */ 
+    border-style: solid; /* Estilo del borde */
+    color: #fff;
+    text-shadow: 2px 0px black, -2px 0px black, 0px 2px black, 0px -2px black;
+    background-color: #0a1a24;
 }
 
 /* ==========================================================
