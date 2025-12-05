@@ -599,6 +599,7 @@ ul  li  a:hover{
     color: #fff;
     text-shadow: 2px 0px black, -2px 0px black, 0px 2px black, 0px -2px black;
     background-color: #0a1a24;
+    text-align: justify;
 }
 
 /* ==========================================================
