@@ -568,7 +568,7 @@ ul  li  a:hover{
     font-family: "f1", sans-serif; /* Fuente F1 */
     text-align: center; /* Centrado */
     border-top: #ff00009a 4px solid; /* Línea divisoria blanca arriba */
-    background-image: url(bandera_gp_silverstone.jpg);
+    background-image: url(fotos/bandera_gp_silverstone.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }

@@ -1,0 +1,180 @@
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #101010;
+    color: white;
+    /* Para que no aparezca barra de scroll horizontal */
+    overflow-x: hidden; 
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #e10600;
+    padding: 40px;
+    text-align: center;
+    border-bottom: 5px solid white;
+}
+header h1 {
+    font-size: 4em;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+/* --- ESTRUCTURA GENERAL DE LA SECCIÓN --- */
+.seccion-coche {
+    /* FLEXBOX: Esto es lo que nos permite poner cosas una al lado de la otra */
+    display: flex;
+    
+    /* Centramos verticalmente el texto con la imagen */
+    align-items: center; 
+    
+    /* Separamos el texto de la imagen */
+    justify-content: space-around; 
+    
+    padding: 80px 10%; /* Mucho espacio para que respire */
+    min-height: 400px; /* Altura mínima por sección */
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* --- ZIG ZAG (La lógica del orden) --- */
+
+/* CASO 1: COCHE A LA DERECHA (Comportamiento por defecto) */
+/* El HTML está escrito primero TEXTO, luego IMAGEN. */
+/* Flexbox los pone en ese orden por defecto. */
+.seccion-coche {
+    text-align: left; /* Texto alineado a la izquierda */
+}
+
+/* CASO 2: COCHE A LA IZQUIERDA (Usando la clase extra) */
+.coche-izquierda {
+    /* MAGIA: Esto invierte el orden visual de los elementos flex */
+    /* Lo que era 1º pasa a ser 2º y viceversa */
+    flex-direction: row-reverse; 
+    text-align: right; /* Texto alineado a la derecha para que quede pegado al borde */
+}
+
+/* --- ESTILOS DE LOS ELEMENTOS INTERNOS --- */
+.contenido-texto {
+    width: 45%; /* El texto ocupa un poco menos de la mitad */
+}
+
+.contenido-imagen {
+    width: 45%; /* La imagen ocupa un poco menos de la mitad */
+}
+
+.nombre-coche {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.seccion-coche p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* --- IMÁGENES Y ANIMACIÓN --- */
+.seccion-coche img {
+    width: 100%; /* Que ocupe todo su contenedor (el 45% definido arriba) */
+    border-radius: 15px;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.5);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Animación suave */
+    cursor: pointer;
+}
+
+.seccion-coche img:hover {
+    transform: scale(1.1) rotate(2deg); /* Efecto zoom y giro */
+    box-shadow: 0px 25px 50px rgba(0,0,0,0.8);
+    z-index: 10; /* Asegura que la imagen quede por encima si se sale */
+}
+
+/* --- COLORES DE LOS 10 EQUIPOS --- */
+
+/* 1. Ferrari */
+.ferrari { 
+    background: linear-gradient(90deg, #1a0000 0%, #a6051a 100%); 
+}
+.ferrari.coche-izquierda { /* Si está invertido, invertimos el degradado también */
+    background: linear-gradient(-90deg, #1a0000 0%, #a6051a 100%); 
+}
+
+/* 2. McLaren */
+.mclaren { 
+    background-color: #151515; 
+    border-right: 10px solid #ff8700;
+}
+.mclaren .nombre-coche { color: #ff8700; }
+
+/* 3. Red Bull */
+.redbull { 
+    background-color: #06192d; 
+    border-left: 10px solid #cc1e4a; /* Borde al lado contrario */
+}
+.redbull .nombre-coche { color: #fcd700; }
+
+/* 4. Mercedes */
+.mercedes { 
+    background: linear-gradient(45deg, #c0c0c0 0%, #000000 100%); 
+    color: white;
+}
+.mercedes .nombre-coche { color: #00d2be; text-shadow: 1px 1px 0 black; }
+
+/* 5. Aston Martin */
+.astonmartin { 
+    background-color: #002420; /* Verde muy oscuro */
+    border-left: 10px solid #006f62; 
+}
+.astonmartin .nombre-coche { color: #cedc00; }
+
+/* 6. Alpine */
+.alpine { 
+    background-color: #0e1c2c; 
+    border-right: 10px solid #fd4bc7; /* Rosa */
+}
+.alpine .nombre-coche { color: #0090ff; }
+
+/* 7. Williams */
+.williams { 
+    background-color: #041e42; 
+    border-left: 10px solid #00a0dd; 
+}
+
+/* 8. VCARB (RB) */
+.rb { 
+    background: white; 
+}
+.rb .nombre-coche { color: #1230df; }
+.rb p { color: #333; } /* Texto oscuro porque el fondo es blanco */
+
+/* 9. Sauber */
+.sauber { 
+    background-color: #000; 
+    border-left: 5px solid #52e252; 
+}
+.sauber .nombre-coche { color: #52e252; }
+
+/* 10. Haas */
+.haas { 
+    background-color: #f0f0f0; 
+    border-right: 10px solid #d91e18;
+}
+.haas .nombre-coche { color: #d91e18; }
+.haas p { color: #000; }
+
+/* --- FOOTER --- */
+footer {
+    background-color: #111;
+    color: #666;
+    padding: 40px;
+    text-align: center;
+}

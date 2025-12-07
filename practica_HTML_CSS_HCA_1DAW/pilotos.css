@@ -1,0 +1,199 @@
+/* 1. DEFINICIÓN DE VARIABLES
+   Esto permite mantener el código limpio y cambiar colores globales fácilmente.
+   Representan los colores de los equipos de la formula 1 2025.
+*/
+:root {
+    --bg-color: #101014;        /* Fondo oscuro "asfalto" */
+    --card-bg: #1e1e24;         /* Fondo de las tarjetas */
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --f1-red: #ff1801;          /* Rojo oficial F1 */
+    
+    /* Colores de Equipos */
+    --ferrari: #ff2800;
+    --mclaren: #ff8000;
+    --redbull: #0600ef;
+    --mercedes: #00d2be;
+    --aston: #006f62;
+    --alpine: #0090ff;
+    --williams: #005aff;
+    --rb: #1634cb;
+    --sauber: #52e252;
+    --haas: #b6babd;
+}
+
+/* 2. RESET CSS BÁSICO
+   Eliminamos los márgenes por defecto del navegador para tener control total.
+   'box-sizing: border-box' es fundamental para que el padding no aumente el tamaño de las cajas.
+*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* 3. ESTILOS GENERALES DEL BODY
+   Tipografía sans-serif para un look moderno y "rápido".
+*/
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Chakra Petch', sans-serif; /* Fuente tecnológica */
+    /* La fuente que he usado que es chakra petch es importada de google,
+    se usa para el juego de F1 si mal no recuerdo. */
+}
+
+/* 4. HEADER (CABECERA)
+   Uso Flexbox para centrar el contenido y un borde inferior estético.
+*/
+.main-header {
+    background: linear-gradient(90deg, #000 0%, #2c2c2c 100%);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 4px solid var(--f1-red);
+    text-transform: uppercase;
+    font-style: italic; /* Simula velocidad */
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+.main-header p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+/* 5. LAYOUT PRINCIPAL (CSS GRID)
+   Uso CSS Grid para un diseño responsive y ordenado.
+*/
+.grid-container {
+    display: grid;
+    gap: 20px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto; /* Centrar el contenedor en pantallas muy grandes */
+}
+
+/* 6. ESTILO DE LAS TARJETAS (TEAMS)
+   Diseño de cada tarjeta de equipo.
+   Uso 'position: relative' para efectos de bordes.
+*/
+.team-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden; /* Para que el contenido no se salga de los bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suavizado para hover */
+    border-top: 5px solid transparent; /* Preparamos el borde superior para el color */
+}
+
+/* Efecto Hover: Al pasar el ratón, la tarjeta se levanta */
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.team-header {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.team-header h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* 7. LISTA DE PILOTOS
+   Quitamos los estilos de lista por defecto (puntos).
+*/
+.drivers-list {
+    padding: 1.5rem;
+}
+
+.drivers-list h3 {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.drivers-list ul {
+    list-style: none;
+}
+
+.drivers-list li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    display: flex; /* Flex para alinear número y nombre */
+    align-items: center;
+}
+
+/* Estilo para los dorsales de los pilotos */
+.number {
+    font-weight: bold;
+    font-size: 1.4rem;
+    width: 40px;
+    margin-right: 10px;
+    font-style: italic;
+}
+
+/* 8. PERSONALIZACIÓN POR EQUIPO
+   Aquí aplicamos las variables definidas al inicio para dar color
+   al borde superior y a los números de cada equipo específico.
+*/
+
+/* Ferrari */
+.ferrari { border-top-color: var(--ferrari); }
+.ferrari .number { color: var(--ferrari); }
+
+/* McLaren */
+.mclaren { border-top-color: var(--mclaren); }
+.mclaren .number { color: var(--mclaren); }
+
+/* Red Bull */
+.redbull { border-top-color: var(--redbull); }
+.redbull .number { color: var(--redbull); }
+
+/* Mercedes */
+.mercedes { border-top-color: var(--mercedes); }
+.mercedes .number { color: var(--mercedes); }
+
+/* Aston Martin */
+.aston { border-top-color: var(--aston); }
+.aston .number { color: var(--aston); }
+
+/* Alpine */
+.alpine { border-top-color: var(--alpine); }
+.alpine .number { color: var(--alpine); }
+
+/* Williams */
+.williams { border-top-color: var(--williams); }
+.williams .number { color: var(--williams); }
+
+/* RB */
+.rb { border-top-color: var(--rb); }
+.rb .number { color: var(--rb); }
+
+/* Sauber */
+.sauber { border-top-color: var(--sauber); }
+.sauber .number { color: var(--sauber); }
+
+/* Haas */
+.haas { border-top-color: var(--haas); }
+.haas .number { color: var(--haas); }
+
+/* 9. FOOTER
+*/
+.main-footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: black;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-top: 2px solid #333;
+    margin-top: 2rem;
+}
