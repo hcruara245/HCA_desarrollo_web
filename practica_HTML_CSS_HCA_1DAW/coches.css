@@ -5,6 +5,76 @@
     box-sizing: border-box;
 }
 
+ul{
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0; /* Sin margen externo */
+    padding: 0; /* Sin espacios internos */
+    display: flex; /* Alinea los elementos en una fila */
+    align-items: stretch; /* Estira los elementos verticalmente */
+    background-color: rgba(255, 0, 0, 0.95); /* Color rojo de la barra */
+    position: fixed; /* La barra se queda fija arriba aunque hagas scroll */
+    top: 0; /* Pega en la parte superior */
+    left: 0; /* Pega a la izquierda */
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 1000; /* Aparece encima de todo lo demás */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* Sombra debajo de la barra */
+}
+
+/* Elemento individual de la lista (cada botón del menú) */
+ul  li{
+    position: relative; /* Permite que los elementos internos se posicionen relativamente */
+}
+
+/* Estilo de los enlaces del menú */
+ul li a{
+    display: block; /* Convierte el enlace en un bloque para que sea más clickeable */
+    padding: 14px 20px; /* Espacio dentro del botón */
+    color: #fff; /* Color blanco */
+    text-decoration: none; /* Quita la raya de los enlaces */
+    font-weight: 600; /* Letra un poco más gruesa */
+    border-right: 1px solid rgba(255,255,255,0.08); /* Línea vertical que separa los botones */
+}
+
+/* Efecto cuando pasas el ratón sobre un enlace del menú */
+ul  li  a:hover{
+    background-color: rgba(230, 0, 0, 1); /* Color rojo más oscuro */
+}
+
+/* Menú desplegable (las opciones que aparecen al hacer hover) */
+.contenido{
+    display: none; /* Por defecto está escondido */
+    position: absolute; /* Se posiciona debajo del botón */
+    top: 100%; /* Justo debajo del elemento padre */
+    left: 0; /* Alineado a la izquierda */
+    background: rgba(230, 0, 0, 0.95); /* Color rojo ligeramente diferente */
+    min-width: 180px; /* Ancho mínimo */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12); /* Sombra para que destaque */
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    flex-direction: column; /* Ordena los elementos en columna */
+    padding: 6px 0; /* Espacio interno */
+}
+
+/* Cuando pasas el ratón sobre un elemento con clase "des" (desplegable), se muestra el menú */
+.des:hover .contenido,
+.des:focus-within .contenido{
+    display: flex; /* Muestra el menú */
+}
+
+/* Estilos de los enlaces dentro del menú desplegable */
+.contenido a{
+    display: block; /* Convierte en bloque para mejor área de click */
+    padding: 10px 14px; /* Espacio dentro */
+    color: #222; /* Color gris oscuro */
+    text-decoration: none; /* Sin subrayado */
+    border-bottom: 1px solid rgba(0,0,0,0.06); /* Línea que separa cada opción */
+}
+
+/* Efecto al pasar el ratón sobre una opción del menú desplegable */
+.contenido a:hover{
+    background: rgba(255, 0, 0, 1); /* Color rojo más fuerte */
+}
+
+
 body {
     font-family: 'Titillium Web', sans-serif;
     background-color: #101010;
