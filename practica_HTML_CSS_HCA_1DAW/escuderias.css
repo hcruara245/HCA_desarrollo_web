@@ -1,0 +1,248 @@
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* El padding no deforma el tamaño final */
+}
+
+/* ======= Estilos del menú superior ======= */
+.top-nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    background-color: rgba(255, 0, 0, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.top-nav ul li{ position: relative; }
+
+.top-nav ul li a{
+    display: block;
+    padding: 14px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.top-nav ul li a:hover{ background-color: rgba(230, 0, 0, 1); }
+
+.top-nav .contenido{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(230, 0, 0, 0.95);
+    min-width: 180px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    border-radius: 4px;
+    flex-direction: column;
+    padding: 6px 0;
+}
+
+.des:hover .contenido,
+.des:focus-within .contenido{
+    display: flex;
+}
+
+.top-nav .contenido a{
+    display: block;
+    padding: 10px 14px;
+    color: #222;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.top-nav .contenido a:hover{ background: rgba(255, 0, 0, 1); color: #fff; }
+
+/* Espacio para evitar que el contenido se solape con la barra fija */
+.top-nav-space{ height: 62px; width: 100%; }
+
+/* Media tweaks */
+@media (max-width:600px){
+    .top-nav ul{ flex-wrap: wrap; }
+    .top-nav ul li a{ padding: 12px 14px; }
+}
+
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #121212; /* Fondo muy oscuro, casi negro */
+    color: white;
+    line-height: 1.6;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #e10600; /* Rojo F1 */
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 5px solid white;
+}
+
+header h1 {
+    font-size: 3.5em;
+    font-style: italic;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+/* --- ESTILO GENERAL DE LA FILA (SECCIÓN) --- */
+.fila-equipo {
+    /* USAMOS FLEXBOX: Para poner texto e imagen lado a lado */
+    display: flex;
+    align-items: center;    /* Centrar verticalmente */
+    justify-content: space-around; /* Espacio alrededor */
+    padding: 80px 10%;      /* Espaciado generoso */
+    min-height: 400px;
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* Línea divisoria suave */
+}
+
+/* --- TAMAÑOS DE LAS CAJAS INTERNAS --- */
+.texto-equipo {
+    width: 45%; /* Ocupa casi la mitad */
+}
+
+.img-equipo {
+    width: 45%; /* Ocupa casi la mitad */
+}
+
+/* --- ESTILOS DE TEXTO --- */
+.texto-equipo h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 20px;
+    border-bottom: 2px solid currentColor; /* Línea del color del texto actual */
+    display: inline-block;
+}
+
+.datos-lista {
+    list-style: none; /* Quitamos los puntos de la lista */
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.datos-lista li {
+    margin-bottom: 5px;
+}
+
+/* --- IMÁGENES Y ANIMACIÓN --- */
+.img-equipo img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    
+    /* Animación al pasar el ratón */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.img-equipo img:hover {
+    transform: scale(1.05); /* Zoom suave del 5% */
+}
+
+/* --- LA CLASE MÁGICA: INVERTIDO (ZIG-ZAG) --- */
+/* Esta clase se la ponemos a los equipos pares (2, 4, 6...) */
+.invertido {
+    /* row-reverse: Pone la imagen a la izquierda y el texto a la derecha */
+    flex-direction: row-reverse; 
+    text-align: right; /* Alineamos el texto a la derecha para que quede bonito */
+}
+
+/* --- COLORES ESPECÍFICOS POR ESCUDERÍA --- */
+
+/* 1. MCLAREN */
+.mclaren {
+    background-color: #1a1a1a;
+    border-left: 8px solid #ff8700;
+}
+.mclaren h2 {
+    color: #ff8700; 
+}
+
+#fotomclaren img {
+    background-color: #ff8700; /* Fondo papaya para el logo */
+}
+
+/* 2. FERRARI */
+.ferrari {
+    background: linear-gradient(to right, #2b0000, #5c000b); /* Degradado */
+    border-right: 8px solid #ffff00; /* Detalle amarillo */
+}
+.ferrari h2 { color: #ffff00; } /* Título amarillo */
+
+/* 3. RED BULL */
+.redbull {
+    background-color: #06192d;
+    border-left: 8px solid #cc1e4a;
+}
+.redbull h2 { color: #fcd700; }
+
+/* 4. MERCEDES */
+.mercedes {
+    background-color: #cfcfcf; /* Fondo gris claro/plata */
+    color: black; /* Texto negro para que se lea sobre gris */
+    border-right: 8px solid #00d2be;
+}
+.mercedes h2 { color: #000; } 
+.mercedes p { color: #333; }
+
+/* 5. ASTON MARTIN */
+.astonmartin {
+    background-color: #002420;
+    border-left: 8px solid #cedc00;
+}
+.astonmartin h2 { color: #cedc00; }
+
+/* 6. ALPINE */
+.alpine {
+    background-color: #101820;
+    border-right: 8px solid #fd4bc7; /* Rosa BWT */
+}
+.alpine h2 { color: #0090ff; } /* Azul Alpine */
+
+/* 7. WILLIAMS */
+.williams {
+    background-color: #041e42;
+    border-left: 8px solid #00a0dd;
+}
+.williams h2 { color: white; }
+
+/* 8. RB (VCARB) */
+.rb {
+    background-color: white;
+    color: #1230df; /* Azul eléctrico */
+    border-right: 8px solid #ff0000;
+}
+.rb p, .rb li { color: #333; } /* Texto oscuro */
+
+/* 9. SAUBER */
+.sauber {
+    background-color: black;
+    border-left: 8px solid #52e252; /* Verde Neón */
+}
+.sauber h2 { color: #52e252; }
+
+/* 10. HAAS */
+.haas {
+    background-color: #f5f5f5;
+    color: black;
+    border-right: 8px solid #d91e18;
+}
+.haas p { color: #333; }
+
+/* --- FOOTER --- */
+footer {
+    background-color: #111;
+    color: gray;
+    text-align: center;
+    padding: 30px;
+}

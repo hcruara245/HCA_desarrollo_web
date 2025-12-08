@@ -228,18 +228,29 @@ header h1 {
 
 /* 9. Sauber */
 .sauber { 
-    background-color: #000; 
+    background-color: #000000; 
     border-left: 5px solid #52e252; 
 }
-.sauber .nombre-coche { color: #52e252; }
+.sauber .nombre-coche {
+    color: #52e252; 
+}
+
+.sauber .contenido-imagen img {
+    background-color: #52e252;
+}
 
 /* 10. Haas */
 .haas { 
     background-color: #f0f0f0; 
     border-right: 10px solid #d91e18;
 }
-.haas .nombre-coche { color: #d91e18; }
-.haas p { color: #000; }
+.haas .nombre-coche {
+    color: #d91e18; 
+}
+
+.haas p {
+    color: #000; 
+}
 
 /* --- FOOTER --- */
 footer {

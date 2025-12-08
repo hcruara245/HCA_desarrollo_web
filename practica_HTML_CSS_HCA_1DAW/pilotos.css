@@ -199,8 +199,7 @@ body {
     margin-top: 2rem;
 }
 
-/* ======= Estilos del menú superior (copiados y adaptados de styles_index.css) ======= */
-/* Scoped to .top-nav to avoid global overrides */
+/* ======= Estilos del menú superior ======= */
 .top-nav ul{
     list-style: none;
     margin: 0;

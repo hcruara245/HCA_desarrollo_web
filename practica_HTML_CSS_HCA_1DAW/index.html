@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-ES">
 <head>
     <!-- Configuración básica de la página -->
     <meta charset="UTF-8">
@@ -27,22 +27,22 @@
             <ul>
                 <!-- Primer elemento del menú: Investigar -->
                 <li class="des"> 
-                    <a href="">Investigar</a>
+                    <a href="index.html">Investigar</a>
                     <!-- Cuando pasas el ratón por encima, aparecen estas opciones -->
                     <div class="contenido">
                         <a href="pilotos.html">Pilotos</a>
                         <a href="coches.html">Coches</a>
-                        <a href="https://google.es">Escuderías</a>
+                        <a href="escuderias.html">Escuderías</a>
                     </div>
                 </li>
                 <!-- Segundo elemento del menú: Comprar -->
                 <li class="des"> 
-                    <a href="https://google.es">Comprar</a>
+                    <a href="https://www.formula1.com/en/results/2025/races">Resultados</a>
                     <!-- Opciones cuando pasas el ratón -->
                     <div class="contenido">
-                        <a href="https://google.es">Tickets abu dhabi</a>
-                        <a href="https://google.es">Ropa</a>
-                        <a href="https://google.es">Exclusivos</a>
+                        <a href="https://www.formula1.com/en/results/2025/races">Carreras</a>
+                        <a href="https://www.formula1.com/en/results/2025/drivers">Pilotos</a>
+                        <a href="https://www.formula1.com/en/results/2025/team">Equipos</a>
                     </div>
                 </li>
                 <!-- Tercer elemento del menú: Redes sociales -->
@@ -208,6 +208,7 @@
                 circuito exigente y con muchas curvas lentas que benefician a los coches con buena
                 carga aerodinámica como Mclaren.
             </p>
+            <!-- Gp de miami con información -->
             <div id="gpmiami">
                 <h2>En el GP de Miami</h2>
                 <p>A pesar de la pole lograda por Max Verstappen, un oscuro fin de semana
@@ -236,6 +237,7 @@
                     hubo un incidente causado por Max Verstappen en el que golpea a otro Piloto
                     de forma intencionada y es penalizado, quedandose con tan solo 1 punto en esa carrera.
                 </p>
+                <!-- Enlace que te lleva a la radio de Verstappen de España -->
                 <a href="#sublistaAudios">Radio Verstappen</a>
                 <p>Se veía una posible rivalidad entre compañeros de equipo y claramente en Canadá se confirmo
                     con un accidente brutal entre ambos pilotos de Mclaren donde solamente Lando Norris fue el
@@ -303,23 +305,114 @@
                 porque sus coches no están a la altura de los demás en este circuito tan rápido.
             </p>
             <!-- Hacer que una foto esté dentro de la otra -->
-            <div class="fotoconfoto">
-                <img src="fotos/gp_spa.jpg" alt="gp spa f1 2025">
-                <div class="fotoencima">
-                    <img src="fotos/gp_spa_verstappen.jpg" alt="verstappen gp spa f1 2025">
+            <div class="contenedor-superpuesto">
+                <img src="fotos/spa_2025.jpg" alt="gp spa f1 2025" class="imagen-fondo">
+                <img src="fotos/norris_gp_spa.png" alt="norris gp spa f1 2025" class="imagen-superior">
+            </div>
+        </div>
+        <div id="remontada">
+            <h1>Post GP de Bélgica</h1>
+            <p>Trás un caotico GP de Bélgica y un Max Verstappen muy alejado del campeonato del mundo
+                empieza una remontada épica. Con victorias consecutivas en muchos grandes premios de lo que 
+                resta de temporada, Verstappen logra recortar puntos a los Mclaren y ponerse a tan solo 12 puntos
+                del liderato. La lucha por el mundial está más emocionante que nunca. Y todo se va a decidir en la 
+                última carrera de la temporada en Abu Dhabi.
+            </p>
+            <p>La temporada no será recordada por el campeón del mundo, si no por todo lo que Max Verstappen 
+                ha sido capaz de hacer teniendo un coche menos competitivo que sus rivales directos. Esto demuestra
+                la gran habilidad del piloto Holandés y su hambre de victorias, pero sobretodo demuestra 
+                que en la F1 no todo es el coche.
+            </p>
+            <div class="plantillaFotos">
+            <h1>Galería de fotos de victorias de Verstappen</h1>
+            <p>Trás el GP de Bélgica no se bajó del podio</p>
+            
+            <!-- Galería de fotos (Más detallado en el CSS) -->
+            <div class="galeriaFotos">
+                <div class="fotoItem">
+                    <img src="fotos/verstappen_gp_hungria.webp" alt="Verstappen gp hungria f1 2025">
+                    <p class="fotoCaption">GP de Hungría</p>
+                </div>
+
+                <div class="fotoItem">
+                    <img src="Fotos/verstappen_gp_americas.webp" alt="Verstappen gp americas f1 2025">
+                    <p class="fotoCaption">GP Américas</p>
+                </div>
+                
+                <div class="fotoItem">
+                    <img src="fotos/verstappen_gp_baku.webp" alt="Verstappen gp baku f1 2025">
+                    <p class="fotoCaption">GP Bakú</p>
+                </div>
+                
+                <div class="fotoItem">
+                    <img src="fotos/verstappen_gp_brasil.webp" alt="Verstappen gp brasil f1 2025">
+                    <p class="fotoCaption">GP de Brasil (salió último y acabo tercero)</p>
+                </div>
+
+                <div class="fotoItem">
+                    <img src="fotos/verstappen_gp_holanda.webp" alt="Verstappen gp holanda f1 2025">
+                    <p class="fotoCaption">GP de Holanda</p>
+                </div>
+
+                <div class="fotoItem">
+                    <img src="fotos/verstappen_gp_mexico.webp" alt="Verstappen gp mexico f1 2025">
+                    <p class="fotoCaption">GP de México</p>
+                </div>
+
+                <div class="fotoItem">
+                    <img src="fotos/verstappen_gp_monza.webp" alt="Verstappen gp monza f1 2025">
+                    <p class="fotoCaption">GP de Monza</p>
+                </div>
+
+                <div class="fotoItem">
+                    <img src="fotos/verstappen_gp_singapur.webp" alt="Verstappen gp Singapur f1 2025">
+                    <p class="fotoCaption">GP de Singapur</p>
+                </div>
+
+                <div class="fotoItem">
+                    <img src="fotos/verstappen_gp_vegas.webp" alt="Verstappen gp Vegas f1 2025">
+                    <p class="fotoCaption">GP de las Vegas</p>
+                </div>
+                
+                <div class="fotoItem">
+                    <img src="fotos/verstappen_gp_qatar.webp" alt="Verstappen gp Qatar f1 2025">
+                    <p class="fotoCaption">GP de Qatar</p>
                 </div>
             </div>
         </div>
-        <div id="gpHungria">
-            
-        </div>
+    </main>
+    <!-- Sección de la última carrera -->
+    <main id="gpabudhabi">
+        <h1>El GP de Abu Dhabi - Decidiendo el campeonato</h1>
+        <p>Los 3 contendientes al mundial: Verstappen, Norris y Piastri llegan a Abu Dhabi
+            con opciones reales de ganar el campeonato del mundo. Max Verstappen está a 12 puntos
+            de Lando Norris, que es el líder del mundial. Oscar Piastri está a 15 puntos del liderato,
+            por lo que la única opción es que Norris se quede fuera del podío y cualquiera de los otros dos
+            pilotos gane la carrera.
+        </p>
+        <p>La carrera promete ser intensa, con estrategias arriesgadas y adelantamientos
+            emocionantes. Los aficionados esperan una batalla épica entre los mejores
+            pilotos del mundo, donde cada punto contará para coronar al campeón del mundo
+            de Fórmula 1 en 2025.
+        </p>
+        <p>
+            Trás una carrera llena de emoción y tensión, Max Verstappen logra la victoria
+            en Abu Dhabi, pero Lando Norris acabó tercero, por lo que Verstappen no es campeón
+            por tan solo 2 puntos. Si viajamos al pasado a España, donde Verstappen fue penalizado
+            por el incidente con George Russell, si Verstappen no hubiera tenido ese incidente, hubiera
+            sido campeón del mundo, o incluso si Kimi Antonelli no hubiera chocado con Verstappen en Austria,
+            también hubiera sido campeón del mundo. Pequeños detalles que marcan la diferencia en un mundial
+            tan ajustado como el de 2025.
+        </p>
+        <img src="fotos/gp_abu_dhabi_norris.webp" alt="gp abu dhabi f1 2025">
     </main>
 
+    
     <!-- Sección 4: Audios y Podcasts de F1 2025 -->
     <main class="seccionAudios" id="seccion-audios-f1">
         <!-- Encabezado de la sección de audios -->
         <div class="contenedorAudios">
-            <h1>Podcast y Audios de F1 - 2025</h1>
+            <h1>Audios de F1 - 2025</h1>
             <p>Escucha los mejores momentos, análisis y comentarios de la temporada 2025</p>
         </div>
         
@@ -328,40 +421,40 @@
             <h2>Audios Destacados de la Temporada</h2>
             <!-- Lista con los audios principales -->
             <ul class="audiosList" id="lista-audios-principales">
-                <!-- Audio 1: Análisis del GP de Melbourne -->
+                <!-- Audio 1: Audio de Alonso -->
                 <li class="itemAudio">
                     <div class="audioContent">
-                        <h3>Análisis del GP de Melbourne</h3>
+                        <h3>Alonso heroe</h3>
                         <!-- Control del reproductor de audio nativo del navegador -->
                         <audio controls>
-                            <source src="audios/analisis_melbourne.mp3" type="audio/mpeg">
+                            <source src="Audios/trophy_hero_race.mp3" type="audio/mpeg">
                             Tu navegador no soporta el elemento de audio.
                         </audio>
-                        <p class="descripcionAudio">Análisis profundo del primer GP de la temporada con los mejores momentos y estrategias.</p>
+                        <p class="descripcionAudio">Alonso se proclama como el "heroe de la carrera" de Singapur.</p>
                     </div>
                 </li>
-                <!-- Audio 2: Entrevista con Lando Norris -->
+                <!-- Audio 2: Radio graciosa Leclerc -->
                 <li class="itemAudio">
                     <div class="audioContent">
-                        <h3>Entrevista con Lando Norris</h3>
+                        <h3>Leclerc Radio</h3>
                         <!-- Control del reproductor de audio -->
                         <audio controls>
-                            <source src="audios/entrevista_norris.mp3" type="audio/mpeg">
+                            <source src="Audios/must_be_the_water_f1.mp3" type="audio/mpeg">
                             Tu navegador no soporta el elemento de audio.
                         </audio>
-                        <p class="descripcionAudio">Lando Norris habla sobre sus objetivos para la temporada y la competencia con Verstappen.</p>
+                        <p class="descripcionAudio">Vacilan a Leclerc por la radio en la lluviosa carrera al preguntar si está mojado. El ingeniero responde humoristicamente "Debe ser el agua".</p>
                     </div>
                 </li>
-                <!-- Audio 3: Podcast sobre estrategia de neumáticos -->
+                <!-- Audio 3: radio alonso -->
                 <li class="itemAudio">
                     <div class="audioContent">
-                        <h3>Podcast: Estrategia de Neumáticos</h3>
+                        <h3>Alonso frustado trás la mala suerte de 2025</h3>
                         <!-- Control del reproductor de audio -->
                         <audio controls>
-                            <source src="audios/podcast_neumaticos.mp3" type="audio/mpeg">
+                            <source src="Audios/unluckiest_radio.mp3" type="audio/mpeg">
                             Tu navegador no soporta el elemento de audio.
                         </audio>
-                        <p class="descripcionAudio">Podcast especializado en estrategia de neumáticos y su impacto en las carreras.</p>
+                        <p class="descripcionAudio">Las primeras carreras de Alonso fueron frustrantes ya que tuvo mucha mala suerte al inicio de la temporada.</p>
                     </div>
                 </li>
             </ul>
@@ -369,30 +462,10 @@
 
         <!-- Segunda lista: Audios organizados por categoría -->
         <div class="listaAudiosSecundaria">
-            <h2>Audios por Categoría</h2>
+            <h2>Audios específicos</h2>
             <!-- Lista de categorías de audios -->
             <ul class="audiosCategorias" id="lista-categorias-audios">
-                <!-- Categoría 1: Entrenamientos Libres -->
-                <li class="categoriaAudio">
-                    <strong>Entrenamientos Libres</strong>
-                    <!-- Sublista con audios de entrenamientos (FP1, FP2, FP3) -->
-                    <ul id="sublistaAudios">
-                        <li><audio controls><source src="audios/fp1_comentarios.mp3" type="audio/mpeg"></audio></li>
-                        <li><audio controls><source src="audios/fp2_resumen.mp3" type="audio/mpeg"></audio></li>
-                        <li><audio controls><source src="audios/fp3_analisis.mp3" type="audio/mpeg"></audio></li>
-                    </ul>
-                </li>
-                <!-- Categoría 2: Clasificaciones -->
-                <li class="categoriaAudio">
-                    <strong>Clasificaciones</strong>
-                    <!-- Sublista con audios de las sesiones de clasificación (Q1, Q2, Q3) -->
-                    <ul id="sublistaAudios">
-                        <li><audio controls><source src="audios/q1_resumen.mp3" type="audio/mpeg"></audio></li>
-                        <li><audio controls><source src="audios/q2_analisis.mp3" type="audio/mpeg"></audio></li>
-                        <li><audio controls><source src="audios/q3_resumen.mp3" type="audio/mpeg"></audio></li>
-                    </ul>
-                </li>
-                <!-- Categoría 3: Carreras -->
+                <!-- Categoría carreras -->
                 <li class="categoriaAudio">
                     <strong>Carreras</strong>
                     <!-- Sublista con audios relacionados a las carreras (resumen, estrategia, incidentes) -->
@@ -401,10 +474,131 @@
                         <li><audio controls><source src="audios/verrstappen_barcelona_1.mp3" type="audio/mpeg"></audio></li>
                         <p>Verstappen - Barcelona audio 2</p>
                         <li><audio controls><source src="audios/verrstappen_barcelona_2.mp3" type="audio/mpeg"></audio></li>
-                        <li><audio controls><source src="audios/carrera_incidentes.mp3" type="audio/mpeg"></audio></li>
                     </ul>
                 </li>
             </ul>
+        </div>
+    </main>
+
+    <!-- Sección 5: Formulario de contacto y suscripción -->
+    <main class="seccionFormulario">
+        <div class="contenedorFormulario">
+            <h1>Suscripción</h1>
+            <p>Recibe las últimas noticias de la temporada.</p>
+            
+            <form class="formularioF1" id="formularioContacto">
+                <!-- Fila 1: Nombre y Email -->
+                <div class="filaFormulario">
+                    <div class="grupoFormulario">
+                        <label for="nombre">Nombre y apellidos*</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Hugo Cruz" required>
+                    </div>
+                    <div class="grupoFormulario">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" placeholder="hugo.ejemplo@ejemplo.com" required>
+                    </div>
+                </div>
+
+                <!-- Fila 2: Teléfono y País -->
+                <div class="filaFormulario">
+                    <div class="grupoFormulario">
+                        <label for="telefono">Teléfono (Opcional)</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+34 633 123 456">
+                    </div>
+                    <div class="grupoFormulario">
+                        <label for="pais">País/Región *</label>
+                        <select id="pais" name="pais" required>
+                            <option value="">-- Selecciona un país --</option>
+                            <option value="españa">España</option>
+                            <option value="méxico">México</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Fila 3: Tema del mensaje -->
+                <div class="grupoFormulario">
+                    <label for="tema">Tema del mensaje *</label>
+                    <select id="tema" name="tema" required>
+                        <option value="">-- Selecciona un tema --</option>
+                        <option value="consulta">Consulta General</option>
+                        <option value="sugerencia">Sugerencia</option>
+                        <option value="error">Reportar Error</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <!-- Fila 4: Piloto favorito -->
+                <div class="grupoFormulario">
+                    <label>¿Cuál es tu piloto favorito? *</label>
+                    <div class="opcionesRadio">
+                        <div class="opcionRadio">
+                            <input type="radio" id="verstappen" name="pilotoFavorito" value="Verstappen" required>
+                            <label for="verstappen">Max Verstappen</label>
+                        </div>
+                        <div class="opcionRadio">
+                            <input type="radio" id="norris" name="pilotoFavorito" value="Norris">
+                            <label for="norris">Lando Norris</label>
+                        </div>
+                        <div class="opcionRadio">
+                            <input type="radio" id="piastri" name="pilotoFavorito" value="Piastri">
+                            <label for="piastri">Oscar Piastri</label>
+                        </div>
+                        <div class="opcionRadio">
+                            <input type="radio" id="otro" name="pilotoFavorito" value="Otro">
+                            <label for="otro">Otro</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fila 5: Intereses -->
+                <div class="grupoFormulario">
+                    <label>¿Qué contenido te interesa? (Puedes seleccionar varios)</label>
+                    <div class="opcionesCheckbox">
+                        <div class="opcionCheckbox">
+                            <input type="checkbox" id="resultados" name="intereses" value="Resultados">
+                            <label for="resultados">Resultados de carreras</label>
+                        </div>
+                        <div class="opcionCheckbox">
+                            <input type="checkbox" id="noticias" name="intereses" value="Noticias">
+                            <label for="noticias">Noticias y rumores</label>
+                        </div>
+                        <div class="opcionCheckbox">
+                            <input type="checkbox" id="analisis" name="intereses" value="Análisis">
+                            <label for="analisis">Análisis técnico</label>
+                        </div>
+                        <div class="opcionCheckbox">
+                            <input type="checkbox" id="videos" name="intereses" value="Videos">
+                            <label for="videos">Videos y highlights</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fila 6: Mensaje -->
+                <div class="grupoFormulario">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos tu opinión, consulta o sugerencia..." rows="5" required></textarea>
+                </div>
+
+                <!-- Fila 7: Checkbox de términos -->
+                <div class="grupoFormulario grupoCheckboxTerminos">
+                    <div class="opcionCheckbox">
+                        <input type="checkbox" id="terminos" name="terminos" required>
+                        <label for="terminos">Acepto los términos y condiciones y la política de privacidad *</label>
+                    </div>
+                    <div class="opcionCheckbox">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Deseo recibir actualizaciones sobre F1 2025</label>
+                    </div>
+                </div>
+
+                <!-- Botones de envío y limpiar -->
+                <div class="botonesFomulario">
+                    <button type="submit" class="botonEnviar">Enviar</button>
+                    <button type="reset" class="botonLimpiar">Limpiar</button>
+                </div>
+            </form>
         </div>
     </main>
 </body>
