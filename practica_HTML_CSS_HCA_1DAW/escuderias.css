@@ -1,9 +1,6 @@
-/* --- RESET BÁSICO --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* El padding no deforma el tamaño final */
-}
+/* TODOS LOS COMENTARIOS QUE NO SE VEAN SON PORQUE YA ESTÁN REPETIDOS EN EL
+     INDEX.HTML o en el styles_index.css, ASÍ QUE NO HACE FALTA REPETIRLOS
+*/
 
 /* ======= Estilos del menú superior ======= */
 .top-nav ul{

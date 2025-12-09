@@ -8,6 +8,12 @@
     src: url("Formula1/Formula1-Regular_web_0.ttf") format("woff");
 }
 
+/*  TODOS LOS COMENTARIOS LOS HE CONFIGURADO PARA QUE SE ESCRIBAN AUTOMATICAMENTE
+    PUEDE QUE ALGUNOS DE ELLOS ESTÉN ERRONEOS O NO TENGAN SENTIDO, LO HE REVISADO
+    CASI TODO PERO COMO ES EVIDENTE SE ME PUEDE PASAR ALGO.
+    EJ: background-color: white /* Color negro /
+*/
+
 /* ==========================================================
    ENCABEZADO (HEADER)
    ========================================================== */
@@ -544,7 +550,7 @@ ul  li  a:hover{
 }
 
 #gpAustria p{
-    color: black; /* Blanco */
+    color: black; /* Negro */
     text-align: center; /* Centrado */
     font-size: 18px; /* Texto grande */
     margin: 4px; /* Margen pequeño */
@@ -692,6 +698,7 @@ video{
     z-index: auto !important; /* Sin orden de capas especial */
     box-shadow: none !important; /* Sin sombra */
 }
+/* Los importantes son para que los reconozca el navegador */
 
 /* ==========================================================
    ELEMENTO INDIVIDUAL DE AUDIO
@@ -878,7 +885,7 @@ video{
 }
 
 #gpSPA p{
-    color: black; /* Blanco */
+    color: black; /* Negro */
     text-align: center; /* Centrado */
     font-size: 18px; /* Texto grande */
     margin: 4px; /* Margen pequeño */
@@ -1024,40 +1031,40 @@ video{
    ========================================================== */
 
 #gpabudhabi {
-  /* Estética general */
-  background-color: #f4f4f4;
-  border-left: 10px solid #45D3D3; /* El famoso Yas Marina Blue */
-  padding: 40px;
-  font-family: "f1", sans-serif; /* Fuente tecnológica estilo racing */
-  color: wheat;
-  max-width: 800px;
-  margin: 0 auto;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  position: relative;
-  overflow: hidden;
+    /* Estética general */
+    background-color: #f4f4f4;
+    border-left: 10px solid #45D3D3; /* El famoso Yas Marina Blue */
+    padding: 40px;
+    font-family: "f1", sans-serif; /* Fuente tecnológica estilo racing */
+    color: wheat;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
 }
 
 #gpabudhabi h1 {
-  text-transform: uppercase;
-  font-style: italic; /* Sensación de velocidad */
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #333;
-  display: inline-block;
+    text-transform: uppercase;
+    font-style: italic; /* Sensación de velocidad */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    display: inline-block;
 }
 
 #gpabudhabi img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  box-shadow: #000000 0px 0px 12px;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: #000000 0px 0px 12px;
 }
 
 #gpabudhabi p {
-  line-height: 1.6;
-  font-size: 1.1rem;
-  margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 
 /* ==========================================================
@@ -1114,7 +1121,7 @@ video{
     gap: 20px;
 }
 
-/* Grupo individual de formulario (label + input) */
+/* Grupo individual de formulario */
 .grupoFormulario {
     display: flex;
     flex-direction: column;
@@ -1164,14 +1171,9 @@ video{
     color: rgba(255, 255, 255, 0.4);
 }
 
-/* Select styling */
 .grupoFormulario select {
     cursor: pointer;
     appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.6)' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 20px;
     padding-right: 35px;
 }
 
@@ -1199,6 +1201,7 @@ video{
 .opcionesRadio {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    /* Que se haga en dos columnas */
     gap: 15px;
     margin-top: 10px;
 }
@@ -1215,6 +1218,7 @@ video{
     width: 18px;
     height: 18px;
     accent-color: rgba(255, 0, 0, 0.95);
+    /* Poner de color rojo el cuadrado/circulo */
 }
 
 .opcionRadio label,
@@ -1271,8 +1275,11 @@ video{
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    /* Hacer la animación suave */
     text-transform: uppercase;
+    /* Pasar lo a mayusc */
     letter-spacing: 0.5px;
+    /* Añadir espacio entre letras */
     font-family: Arial, sans-serif;
 }
 
@@ -1305,3 +1312,18 @@ video{
     color: #fff;
 }
 
+/* ====================
+    LOGO DE LA F1
+    ===================
+*/
+
+.logoF1 img {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 100px;
+    height: auto;
+    z-index: 1000;
+    border-radius: 50px;
+    border: #000000 2px solid;
+}

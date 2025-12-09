@@ -1,4 +1,4 @@
-/* Professional, simple form styles */
+/* Estilos profesionales y sencillos para formularios */
 :root{
     --bg: #0f172a; /* dark blue */
     --card: #ffffff;
@@ -7,7 +7,7 @@
     --success: #10b981;
 }
 
-/* Page background and typography */
+/* Fondo de la página y tipografía */
 body{
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
@@ -46,7 +46,7 @@ main{ display:flex; justify-content:center; padding:2rem 1rem; }
     background: #fff;
 }
 
-/* Textarea should not overflow the form width and only be vertically resizable */
+/* El textarea no debe desbordar el ancho del formulario y solo debe poder redimensionarse verticalmente */
 .field textarea{
     padding: 0.5rem 0.6rem;
     border: 1px solid #e6eef8;
@@ -55,8 +55,8 @@ main{ display:flex; justify-content:center; padding:2rem 1rem; }
     background: #fff;
     width: 100%;
     max-width: 100%;
-    box-sizing: border-box; /* include padding/border in width calculation */
-    resize: vertical; /* allow vertical resize only */
+    box-sizing: border-box; /* incluir padding/border en el cálculo del ancho */
+    resize: vertical; /* permitir redimensionar solo verticalmente */
 }
 
 .field input[type="text"]::placeholder,
@@ -79,16 +79,16 @@ fieldset.field label{ display:inline-flex; align-items:center; gap:0.5rem; margi
 }
 .btn:hover{ transform: translateY(-2px); box-shadow: 0 10px 30px rgba(37,99,235,0.2); }
 
-/* Responsive */
+/* Adaptativo (responsive) */
 @media (max-width:420px){
     .form-card{ padding: 1rem; border-radius:10px; }
 }
 
-/* small accessibility helpers */
+/* Pequeños auxiliares de accesibilidad */
 input:focus, select:focus{ outline: 3px solid rgba(37,99,235,0.15); }
 label[aria-hidden="true"]{ display:none; }
 
-/* Global textarea rule: never wider than its form/card and only vertical resize allowed */
+/* Regla global para textarea: nunca más ancho que su formulario/tarjeta y solo redimensionamiento vertical permitido */
 form textarea, .form-card textarea, textarea {
     width: 100%;
     max-width: 100%;
@@ -105,7 +105,7 @@ form textarea, .form-card textarea, textarea {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
-/* Subtle, minimal enhancements for specific small controls */
+/* Mejoras sutiles y mínimas para controles pequeños específicos */
 .fecha, .buscar, .archivo, .colores{
     display: flex;
     flex-direction: column;
@@ -127,14 +127,14 @@ form textarea, .form-card textarea, textarea {
     font-size: 0.95rem;
 }
 
-/* File input and color pickers show native UI; keep small padding and alignment */
+/* Los inputs de archivo y color muestran la interfaz nativa; mantener padding y alineación reducidos */
 .archivo input[type="file"]{ padding: 0.25rem; height: auto; }
 .colores input[type="color"]{ padding: 6px; height: 38px; }
 
-/* Ensure these controls don't get the textarea resize behaviour */
+/* Asegurar que estos controles no reciban el comportamiento de redimensionamiento de textarea */
 .fecha, .buscar, .archivo, .colores textarea{ resize: vertical; }
 
-/* Password validation visuals: red when invalid, green when valid */
+/* Visuales de validación de contraseña: rojo cuando es inválida, verde cuando es válida */
 #password{
     transition: box-shadow 0.18s ease, border-color 0.18s ease;
 }
